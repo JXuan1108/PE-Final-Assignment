@@ -11,6 +11,7 @@ namespace PE_Final_Assignment
     {
         protected void Application_Start(object sender, EventArgs e)
         {
+            int hi = 0;
         }
     }
 }
