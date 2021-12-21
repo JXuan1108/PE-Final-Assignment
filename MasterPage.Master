@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="PE_Final_Assignment.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%--bootstrap css--%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--dataTable css--%>
+    <link href="dataTables/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+    <%--bootstrap js--%>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <%--dataTable js--%>
+    <script src="dataTables/js/jquery.dataTables.min.js"></script>
+
+    <%--css--%>
+    <link href="main.css" rel="stylesheet" type="text/css"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+             <nav class="navbar navbar-expand-lg navbar-light">
+                 <div id="brand" class="col-xs-5 col-sm-5 col-md-5" style="margin-left: 70px;">
+                    <a class="navbar-brand" href="index.aspx" style="font-family:dooodleista; font-size: 40px;">
+                        <img src="images/petLogo.png" style="height: 13%; width: 13%;"/>
+                        PAWS N' CLAWS
+                    </a>
+                 </div>
+
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+                 <div class="collapse navbar-collapse col-xs-5 col-sm-5 col-md-5 text-center" id="navbarSupportedContent"  style="margin-left: 70px">
+                    <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.aspx">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pet Shop</a>
+                        </li>
+                        <li class="nav-item dropdown" id="dropdown_navbar">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Services
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Pet Grooming</a>
+                                <a class="dropdown-item" href="#">Pet Hotel</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ProfilePage.aspx">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <asp:LinkButton class="nav-link" ID="login" runat="server" Visible="false" OnClick="login_Click">Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item">
+                            <asp:LinkButton class="nav-link" ID="logout" runat="server" Visible="false" OnClick="logout_Click" style="margin-left: -20px">Logout</asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
