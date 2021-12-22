@@ -24,6 +24,15 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.TextBox firstName;
 
         /// <summary>
+        /// FirstNameRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator FirstNameRequiredFieldValidator;
+
+        /// <summary>
         /// lastName control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace PE_Final_Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox lastName;
+
+        /// <summary>
+        /// LastNameRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator LastNameRequiredFieldValidator;
 
         /// <summary>
         /// Date control.
@@ -42,6 +60,15 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.TextBox Date;
 
         /// <summary>
+        /// DateRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator DateRequiredFieldValidator;
+
+        /// <summary>
         /// contact control.
         /// </summary>
         /// <remarks>
@@ -49,6 +76,24 @@ namespace PE_Final_Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox contact;
+
+        /// <summary>
+        /// PhoneRequiredField control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator PhoneRequiredField;
+
+        /// <summary>
+        /// PhoneRegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator PhoneRegularExpressionValidator;
 
         /// <summary>
         /// email control.
@@ -60,6 +105,24 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.TextBox email;
 
         /// <summary>
+        /// EmailFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator EmailFieldValidator;
+
+        /// <summary>
+        /// EmailRegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator EmailRegularExpressionValidator;
+
+        /// <summary>
         /// password control.
         /// </summary>
         /// <remarks>
@@ -67,6 +130,24 @@ namespace PE_Final_Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox password;
+
+        /// <summary>
+        /// PasswordFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator PasswordFieldValidator;
+
+        /// <summary>
+        /// PasswordRegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator PasswordRegularExpressionValidator;
 
         /// <summary>
         /// address control.
@@ -78,6 +159,15 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.TextBox address;
 
         /// <summary>
+        /// AddressRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator AddressRequiredFieldValidator;
+
+        /// <summary>
         /// stateList control.
         /// </summary>
         /// <remarks>
@@ -85,6 +175,15 @@ namespace PE_Final_Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList stateList;
+
+        /// <summary>
+        /// StateRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator StateRequiredFieldValidator;
 
         /// <summary>
         /// city control.
@@ -96,6 +195,15 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.TextBox city;
 
         /// <summary>
+        /// CityRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator CityRequiredFieldValidator;
+
+        /// <summary>
         /// postcode control.
         /// </summary>
         /// <remarks>
@@ -103,6 +211,24 @@ namespace PE_Final_Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox postcode;
+
+        /// <summary>
+        /// PostcodeRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator PostcodeRequiredFieldValidator;
+
+        /// <summary>
+        /// PostcodeRegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator PostcodeRegularExpressionValidator;
 
         /// <summary>
         /// signUp control.

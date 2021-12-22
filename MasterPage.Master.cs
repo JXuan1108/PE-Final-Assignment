@@ -17,16 +17,18 @@ namespace PE_Final_Assignment
                 {
                     login.Visible = true; //login button
                     logout.Visible = false; //logout button
+                    profile.Visible = false; //profile button
                 }
                 else if (Session["role"].Equals("user"))
                 {
                     login.Visible = false; //login button
                     logout.Visible = true; //logout button
+                    profile.Visible = true; //profile button
                 }
             }
-            catch
+            catch(Exception ex)
             {
-
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
             
         }
@@ -45,6 +47,12 @@ namespace PE_Final_Assignment
 
             login.Visible = true; //login button
             logout.Visible = false; //logout button
+            profile.Visible = false; //profile button
+        }
+
+        protected void profile_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/ProfilePage.aspx");
         }
     }
 }

@@ -69,9 +69,11 @@
   <ItemGroup>
     <Content Include="bootstrap\css\bootstrap.min.css" />
     <Content Include="bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="contactUsPage.aspx" />
     <Content Include="dataTables\css\jquery.dataTables.min.css" />
     <Content Include="dataTables\js\jquery.dataTables.min.js" />
     <Content Include="EditProfilePage.aspx" />
+    <Content Include="FeedbackPage.aspx" />
     <Content Include="fontawesome\attribution.js" />
     <Content Include="fontawesome\css\all.css" />
     <Content Include="fontawesome\css\all.min.css" />
@@ -1721,14 +1723,23 @@
     <Content Include="fontawesome\webfonts\fa-solid-900.svg" />
     <Content Include="forgotPasswordPage.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="images\angry.png" />
+    <Content Include="images\confused.png" />
+    <Content Include="images\feedback_header.jpeg" />
     <Content Include="images\grooming-spa1.jpeg" />
     <Content Include="images\grooming-spa2.jpeg" />
+    <Content Include="images\in-love.png" />
+    <Content Include="images\laughing.png" />
     <Content Include="images\lock.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\pet.jpeg" />
     <Content Include="images\petHotel1.jpeg" />
     <Content Include="images\petHotel2.jpeg" />
     <Content Include="images\petLogo.png" />
+    <Content Include="images\petPlay.jpeg" />
+    <Content Include="images\petPortrait.jpeg" />
+    <Content Include="images\petSwim.jpeg" />
+    <Content Include="images\sad.png" />
     <Content Include="images\userIcon.png" />
     <Content Include="LoginPage.aspx" />
     <Content Include="main.css" />
@@ -1738,12 +1749,26 @@
     <Content Include="index.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="contactUsPage.aspx.cs">
+      <DependentUpon>contactUsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contactUsPage.aspx.designer.cs">
+      <DependentUpon>contactUsPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EditProfilePage.aspx.cs">
       <DependentUpon>EditProfilePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="EditProfilePage.aspx.designer.cs">
       <DependentUpon>EditProfilePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FeedbackPage.aspx.cs">
+      <DependentUpon>FeedbackPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeedbackPage.aspx.designer.cs">
+      <DependentUpon>FeedbackPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="forgotPasswordPage.aspx.cs">
       <DependentUpon>forgotPasswordPage.aspx</DependentUpon>
@@ -1850,6 +1875,11 @@
     <Content Include="fontawesome\webfonts\fa-solid-900.woff2" />
     <Content Include="fonts\Roboto-Regular.ttf" />
     <Content Include="fonts\dooodleistabold.ttf" />
+    <Content Include="fonts\coiny-regular.ttf" />
+    <Content Include="fonts\Quicksand-Regular.ttf" />
+    <Content Include="fonts\Quicksand-Medium.ttf" />
+    <Content Include="fonts\Quicksand-Bold.ttf" />
+    <Content Include="fonts\Pacifico-Regular.ttf" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

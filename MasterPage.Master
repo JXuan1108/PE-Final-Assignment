@@ -9,6 +9,8 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <%--dataTable css--%>
     <link href="dataTables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
 
     <%--bootstrap js--%>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -56,13 +58,13 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
+                            <a class="nav-link" href="contactUsPage.aspx">Contact Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ProfilePage.aspx">Profile</a>
+                            <asp:LinkButton class="nav-link" ID="profile" runat="server" Visible="false" OnClick="profile_Click">Profile</asp:LinkButton>
                         </li>
                         <li class="nav-item">
-                            <asp:LinkButton class="nav-link" ID="login" runat="server" Visible="false" OnClick="login_Click">Login</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" ID="login" runat="server" Visible="false" OnClick="login_Click" style="margin-left: -20px">Login</asp:LinkButton>
                         </li>
                         <li class="nav-item">
                             <asp:LinkButton class="nav-link" ID="logout" runat="server" Visible="false" OnClick="logout_Click" style="margin-left: -20px">Logout</asp:LinkButton>

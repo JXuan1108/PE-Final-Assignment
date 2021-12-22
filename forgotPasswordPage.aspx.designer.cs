@@ -24,6 +24,24 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.TextBox email;
 
         /// <summary>
+        /// EmailFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator EmailFieldValidator;
+
+        /// <summary>
+        /// EmailRegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator EmailRegularExpressionValidator;
+
+        /// <summary>
         /// resetPwd control.
         /// </summary>
         /// <remarks>
@@ -33,6 +51,24 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.TextBox resetPwd;
 
         /// <summary>
+        /// resetPwdFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator resetPwdFieldValidator;
+
+        /// <summary>
+        /// resetPwdRegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator resetPwdRegularExpressionValidator;
+
+        /// <summary>
         /// confirmPwd control.
         /// </summary>
         /// <remarks>
@@ -40,6 +76,24 @@ namespace PE_Final_Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox confirmPwd;
+
+        /// <summary>
+        /// confirmPwdRequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator confirmPwdRequiredFieldValidator1;
+
+        /// <summary>
+        /// confirmPwdRegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator confirmPwdRegularExpressionValidator;
 
         /// <summary>
         /// resetPwdButton control.
