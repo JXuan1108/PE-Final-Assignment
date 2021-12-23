@@ -13,5 +13,20 @@ namespace PE_Final_Assignment
         {
 
         }
+
+        protected void petShopButton_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("petShopPage.aspx");
+        }
+
+        protected void petHotelButton_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("petHotelPage.aspx");
+        }
+
+        protected void petGroomingButton_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("petGroomingPage.aspx");
+        }
     }
 }

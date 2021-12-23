@@ -1,0 +1,193 @@
+﻿/*About Us 'What make our different'*/
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.bttn:hover {
+    color: #B15947;
+}
+
+.whyus-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.bttn {
+    width: 13.5rem;
+    height: 14rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+    color: #333;
+    text-decoration: none;
+    transition: 0.3s all ease;
+}
+
+    .bttn h4 {
+        font-size: 3.5rem;
+        color: #860000;
+        padding-top: 0.5rem;
+        border-bottom: 2px dashed #860000;
+        position: absolute;
+        width: 35%;
+        opacity: 1;
+        line-height: 5.5rem;
+    }
+
+    .bttn p {
+        font-size: 1.2rem;
+        padding-top: 7rem;
+        color: #860000;
+        opacity: 1;
+        line-height: 2rem;
+    }
+
+    .bttn:after {
+        transition: 0.3s all ease;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        border-radius: 3px;
+        border: 2px solid rgba(228, 213, 208, 1);
+    }
+
+    .bttn:before {
+        content: "";
+        position: absolute;
+        border-radius: 3px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(228, 213, 208, 0.5);
+        z-index: -1;
+    }
+
+    .bttn:hover:after {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+/*About Us Our Team*/
+.ourteam h1 {
+    padding-bottom: 50px;
+    font-family: blackjack;
+}
+
+.team-profile1 {
+    position: relative;
+    height: 18.75rem;
+    width: 15rem;
+    overflow: hidden;
+    border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
+    box-shadow: -15px 15px rgba(0,0,0,.15);
+    transition: all .4s ease;
+}
+
+
+.team-profile2 {
+    position: relative;
+    height: 18.75rem;
+    width: 15rem;
+    overflow: hidden;
+    border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
+    box-shadow: 15px 15px rgba(0,0,0,.15);
+    transition: all .4s ease;
+}
+
+.team-profile1 img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+}
+
+.team-profile2 img {
+    height: 100%;
+    width: 100%;
+}
+
+.team-profile-text1, .team-profile-text2 {
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+    background-color: white;
+    position: absolute;
+    bottom: -12.5rem;
+    width: 85%;
+    height: 32%;
+    visibility: hidden;
+    -webkit-transition: all, 0.5s;
+    -o-transition: all, 0.5s;
+    transition: all, 0.5s;
+}
+
+.team-profile-text1 {
+    right: 0;
+}
+
+.team-profile-text1 h2, .team-profile-text2 h2 {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: start;
+}
+
+.team-profile-text1 p, .team-profile-text2 p {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-align: start;
+}
+
+.team-profile1:hover .team-profile-text1 {
+    visibility: visible;
+    bottom: 0;
+    right: 0;
+}
+
+.team-profile2:hover .team-profile-text2 {
+    visibility: visible;
+    bottom: 0;
+}
+
+.team-profile1:hover {
+    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
+    box-shadow: -10px 10px rgba(0,0,0,.25);
+}
+
+.team-profile2:hover {
+    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
+    box-shadow: 10px 10px rgba(0,0,0,.25);
+}
+
+.social {
+    position: absolute;
+    top: 65%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+
+.social li {
+    margin: 4px 0;
+    list-style-type: none;
+}
+
+.social li a {
+    color: #192A52;
+    font-size: 15px;
+    transition: all 0.3s ease-out 0s;
+}
+
+.social li a:hover {
+    color: #E84E4E;
+}

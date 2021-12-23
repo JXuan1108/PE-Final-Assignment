@@ -37,24 +37,24 @@
                     <span class="navbar-toggler-icon"></span>
                   </button>
 
-                 <div class="collapse navbar-collapse col-xs-5 col-sm-5 col-md-5 text-center" id="navbarSupportedContent"  style="margin-left: 70px">
-                    <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                 <div class="collapse navbar-collapse col-xs-5 col-sm-5 col-md-5 text-center" id="navbarSupportedContent"  style="margin-left: 40px">
+                    <ul class="navbar-nav mr-auto mb-2 mb-lg-0" style="white-space: nowrap">
                         <li class="nav-item active">
                             <a class="nav-link" href="index.aspx">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
+                            <a class="nav-link" href="AboutUsPage.aspx">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pet Shop</a>
+                            <a class="nav-link" href="petShopPage.aspx">Pet Shop</a>
                         </li>
                         <li class="nav-item dropdown" id="dropdown_navbar">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Services
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Pet Grooming</a>
-                                <a class="dropdown-item" href="#">Pet Hotel</a>
+                                <a class="dropdown-item" href="petGroomingPage.aspx">Pet Grooming</a>
+                                <a class="dropdown-item" href="petHotelPage.aspx">Pet Hotel</a>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -64,7 +64,7 @@
                             <asp:LinkButton class="nav-link" ID="profile" runat="server" Visible="false" OnClick="profile_Click">Profile</asp:LinkButton>
                         </li>
                         <li class="nav-item">
-                            <asp:LinkButton class="nav-link" ID="login" runat="server" Visible="false" OnClick="login_Click" style="margin-left: -20px">Login</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" ID="login" runat="server" Visible="true" OnClick="login_Click" style="margin-left: -20px">Login</asp:LinkButton>
                         </li>
                         <li class="nav-item">
                             <asp:LinkButton class="nav-link" ID="logout" runat="server" Visible="false" OnClick="logout_Click" style="margin-left: -20px">Logout</asp:LinkButton>

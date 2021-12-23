@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AboutUs.css" />
+    <Content Include="AboutUsPage.aspx" />
     <Content Include="bootstrap\css\bootstrap.min.css" />
     <Content Include="bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="contactUsPage.aspx" />
@@ -1723,32 +1725,49 @@
     <Content Include="fontawesome\webfonts\fa-solid-900.svg" />
     <Content Include="forgotPasswordPage.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="images\aboutUs.jpeg" />
     <Content Include="images\angry.png" />
     <Content Include="images\confused.png" />
     <Content Include="images\feedback_header.jpeg" />
     <Content Include="images\grooming-spa1.jpeg" />
     <Content Include="images\grooming-spa2.jpeg" />
+    <Content Include="images\img_alvin.jpeg" />
+    <Content Include="images\img_jx.jpeg" />
+    <Content Include="images\img_yw.jpeg" />
     <Content Include="images\in-love.png" />
     <Content Include="images\laughing.png" />
     <Content Include="images\lock.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\pet.jpeg" />
+    <Content Include="images\petCare.jpeg" />
+    <Content Include="images\petHotel.jpeg" />
     <Content Include="images\petHotel1.jpeg" />
     <Content Include="images\petHotel2.jpeg" />
     <Content Include="images\petLogo.png" />
     <Content Include="images\petPlay.jpeg" />
     <Content Include="images\petPortrait.jpeg" />
+    <Content Include="images\petShop.jpeg" />
     <Content Include="images\petSwim.jpeg" />
     <Content Include="images\sad.png" />
     <Content Include="images\userIcon.png" />
     <Content Include="LoginPage.aspx" />
     <Content Include="main.css" />
+    <Content Include="petGroomingPage.aspx" />
+    <Content Include="petHotelPage.aspx" />
+    <Content Include="petShopPage.aspx" />
     <Content Include="ProfilePage.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="Web.config" />
     <Content Include="index.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUsPage.aspx.cs">
+      <DependentUpon>AboutUsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUsPage.aspx.designer.cs">
+      <DependentUpon>AboutUsPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="contactUsPage.aspx.cs">
       <DependentUpon>contactUsPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1793,6 +1812,27 @@
     </Compile>
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="petGroomingPage.aspx.cs">
+      <DependentUpon>petGroomingPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="petGroomingPage.aspx.designer.cs">
+      <DependentUpon>petGroomingPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="petHotelPage.aspx.cs">
+      <DependentUpon>petHotelPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="petHotelPage.aspx.designer.cs">
+      <DependentUpon>petHotelPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="petShopPage.aspx.cs">
+      <DependentUpon>petShopPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="petShopPage.aspx.designer.cs">
+      <DependentUpon>petShopPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProfilePage.aspx.cs">
       <DependentUpon>ProfilePage.aspx</DependentUpon>

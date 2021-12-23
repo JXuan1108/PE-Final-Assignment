@@ -40,7 +40,7 @@
         </div>
 	</div>
 
-    <div class="container" style="margin-top: 6rem; padding-bottom: 5rem">
+    <div class="container" style="margin-top: 6rem; padding-bottom: 5rem" align="center">
 		<div class="row justify-content-md-center">
 			<div class="col-6 col-md-4 px-0">
 			    <img class="img-responsive" src="images/petSwim.jpeg" style="height: 100%; width: 100%">
