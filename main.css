@@ -275,3 +275,10 @@ li {
     text-align: center;
 }
 
+/* petShopPage.aspx */
+.adopt-img-bg {
+    background: url(images/dog-pet-adopt.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
