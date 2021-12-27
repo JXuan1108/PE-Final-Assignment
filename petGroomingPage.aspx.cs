@@ -13,5 +13,17 @@ namespace PE_Final_Assignment
         {
 
         }
+
+        protected void dogServiceBtn_Click(object sender, ImageClickEventArgs e)
+        {
+            Session["SelectedPetService"] = @"images/dogGroomPrice.jpg";
+            Response.Redirect("~/ReservationPage.aspx");
+        }
+
+        protected void catServiceBtn_Click(object sender, ImageClickEventArgs e)
+        {
+            Session["SelectedPetService"] = @"images/catGroomPrice.jpg";
+            Response.Redirect("~/ReservationPage.aspx");
+        }
     }
 }

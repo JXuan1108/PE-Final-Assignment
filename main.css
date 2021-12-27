@@ -353,3 +353,13 @@ li {
     box-shadow: 0rem 0.4rem 0.7rem 0.05rem #00ffff;
     transform: scale(1.05) rotate(-1deg);
 }
+
+/* petGroomingPage */
+.rotateBtn:hover {
+    transform: rotate(15deg);
+}
+
+/* groomReservationPage*/
+.serviceImg {
+    width: inherit;
+}

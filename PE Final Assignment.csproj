@@ -1725,9 +1725,14 @@
     <Content Include="fontawesome\webfonts\fa-solid-900.svg" />
     <Content Include="forgotPasswordPage.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="ReservationPage.aspx" />
     <Content Include="images\aboutUs.jpeg" />
     <Content Include="images\angry.png" />
+    <Content Include="images\catGroomImg.png" />
+    <Content Include="images\catGroomPrice.jpg" />
     <Content Include="images\confused.png" />
+    <Content Include="images\dogGroomImg.png" />
+    <Content Include="images\dogGroomPrice.jpg" />
     <Content Include="images\feedback_header.jpeg" />
     <Content Include="images\grooming-spa1.jpeg" />
     <Content Include="images\grooming-spa2.jpeg" />
@@ -1755,6 +1760,8 @@
     <Content Include="images\petShop.jpeg" />
     <Content Include="images\petSwim.jpeg" />
     <Content Include="images\sad.png" />
+    <Content Include="images\shop_now_cat.png" />
+    <Content Include="images\shop_now_dog.png" />
     <Content Include="images\userIcon.png" />
     <Content Include="LoginPage.aspx" />
     <Content Include="main.css" />
@@ -1804,6 +1811,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ReservationPage.aspx.cs">
+      <DependentUpon>ReservationPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReservationPage.aspx.designer.cs">
+      <DependentUpon>ReservationPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
