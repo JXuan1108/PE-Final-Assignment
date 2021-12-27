@@ -1743,6 +1743,12 @@
     <Content Include="images\petHotel.jpeg" />
     <Content Include="images\petHotel1.jpeg" />
     <Content Include="images\petHotel2.jpeg" />
+    <Content Include="images\petHotelCatDeluxe.jpg" />
+    <Content Include="images\petHotelCatRoyal.jpg" />
+    <Content Include="images\petHotelDogBasic.jpg" />
+    <Content Include="images\petHotelDogDeluxe.jpg" />
+    <Content Include="images\petHotelDogRoyal.JPG" />
+    <Content Include="images\petHotelHeader.jpeg" />
     <Content Include="images\petLogo.png" />
     <Content Include="images\petPlay.jpeg" />
     <Content Include="images\petPortrait.jpeg" />

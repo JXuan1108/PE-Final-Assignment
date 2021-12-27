@@ -275,3 +275,81 @@ li {
     text-align: center;
 }
 
+/* Pet hotel page */
+.hotelHeaderImg{
+    width: 70rem;
+    height: 35rem;
+}
+
+.carousel-control-prev{
+    left: 7.5rem;
+}
+
+.carousel-control-next{
+    right: 7.5rem;
+}
+
+.hotelDetails {
+    margin-left: 8rem;
+    margin-right: 8rem;
+}
+
+.hotelSectionImg {
+    width: 24rem;
+    height: 16rem;
+}
+
+.flexBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+.planDiv {
+    width: 48%;
+    padding-top: 1.75em;
+    padding-bottom: 1.75em;
+    margin-top: 1.25em;
+    margin-bottom: 1.35em;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 2rem;
+    box-shadow: 1rem 1rem #e8e8e8;
+}
+
+.planHotelType {
+    font-size: 1.5rem;
+    font-family: coiny;
+}
+
+.planItems {
+    text-align: left;
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
+.planSubTitle {
+    font-size: 1.1rem;
+    font-family: quicksand_bold;
+}
+
+.tab{
+    padding-left: 2rem;
+}
+
+.requestButton {
+    background-color: #0d6efd;
+    border-radius: 10em;
+    box-shadow: 0rem 0.4rem 0.7rem 0.05rem #00ccff;
+    color: #003399;
+    padding: 0.5em 1em;
+    text-align: center;
+    transition: all 250ms;
+    border: none;
+    margin-left: 6.8rem;
+}
+
+.requestButton:hover {
+    box-shadow: 0rem 0.4rem 0.7rem 0.05rem #00ffff;
+    transform: scale(1.05) rotate(-1deg);
+}
