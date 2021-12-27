@@ -44,10 +44,46 @@ namespace PE_Final_Assignment
                     }
                 } catch (Exception ex)
                 {
-
+                    Debug.WriteLine("Error pet hotel database conenction" + ex);
                 }
 
             }
+        }
+
+        protected void buttonDogBasic_Click(object sender, EventArgs e)
+        {
+            Session["SelectedPetService"] = @"images/petHotelDogBasic.jpg";
+            Response.Redirect("~/ReservationPage.aspx");
+        }
+
+        protected void buttonBogDeluxe_Click(object sender, EventArgs e)
+        {
+            Session["SelectedPetService"] = @"images/petHotelDogDeluxe.jpg";
+            Response.Redirect("~/ReservationPage.aspx");
+        }
+
+        protected void buttonBogRoyal_Click(object sender, EventArgs e)
+        {
+            Session["SelectedPetService"] = @"images/petHotelDogRoyal.jpg";
+            Response.Redirect("~/ReservationPage.aspx");
+        }
+
+        protected void buttonCatBasic_Click(object sender, EventArgs e)
+        {
+            Session["SelectedPetService"] = @"images/petHotel2.jpg";
+            Response.Redirect("~/ReservationPage.aspx");
+        }
+
+        protected void buttonCatDeluxe_Click(object sender, EventArgs e)
+        {
+            Session["SelectedPetService"] = @"images/petHotelCatDeluxe.jpg";
+            Response.Redirect("~/ReservationPage.aspx");
+        }
+
+        protected void buttonCatRoyal_Click(object sender, EventArgs e)
+        {
+            Session["SelectedPetService"] = @"images/petHotelCatRoyal.jpg";
+            Response.Redirect("~/ReservationPage.aspx");
         }
     }
 }

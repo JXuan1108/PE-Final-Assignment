@@ -8,13 +8,10 @@
                 <asp:Image ID="servicePricesImgHolder" CssClass="serviceImg" runat="server" />
             </div>
             <div class="col">
-
-                <asp:Label ID="ServicePrice" runat="server"></asp:Label> <br /> 
-                <!-- Reservation Date -->
-                <asp:TextBox CssClass="form-control" ID="ReservationDate" runat="server" TextMode="Date"></asp:TextBox>
-                
                 <div id="dogForm" runat="server">
-
+                    <asp:Label ID="ServicePrice" runat="server"></asp:Label> <br /> 
+                    <!-- Reservation Date -->
+                    <asp:TextBox CssClass="form-control" ID="ReservationDate" runat="server" TextMode="Date"></asp:TextBox>
                     <asp:Label ID="dogSizeLabel" runat="server" Text="Dog Size"></asp:Label>
                     <asp:DropDownList ID="dogSizeDDL" CssClass="form-control" runat="server" AutoPostBack="True">
                         <asp:ListItem Value="0">Small</asp:ListItem>
@@ -48,6 +45,9 @@
                 </div>
 
                 <div id="catForm" runat="server">
+                    <asp:Label ID="Label2" runat="server"></asp:Label> <br /> 
+                    <!-- Reservation Date -->
+                    <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" TextMode="Date"></asp:TextBox>
                     <asp:Label ID="catBathL" runat="server" Text="Bath"></asp:Label>
                     <asp:CheckBox ID="catBathCb" runat="server" AutoPostBack="True" /> <br />
 
@@ -65,6 +65,25 @@
 
                     <asp:Button ID="catSubmitBtn" runat="server" Text="Reserve Now" OnClick="catSubmitBtn_Click" />
                 </div>
+                <div id="hotelForm" runat="server">
+                    <asp:Label ID="Label3" runat="server" Text="From:"></asp:Label>
+                    <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" TextMode="Date"></asp:TextBox>
+                    
+                    <asp:Label ID="Label4" runat="server" Text="To:"></asp:Label>
+                    <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" TextMode="Date"></asp:TextBox>
+                    
+                    <asp:Label ID="Label1" runat="server" Text="Pet type:"></asp:Label>
+                    <asp:Label ID="petTypeL" runat="server"></asp:Label><br />
+
+                    <asp:Label ID="Label5" runat="server" Text="Hotel Type:"></asp:Label>
+                    <asp:Label ID="hotelTypeL" runat="server"></asp:Label><br />
+
+                    <asp:Label ID="Label7" runat="server" Text="Price/day:"></asp:Label>
+                    <asp:Label ID="priceRateL" runat="server"></asp:Label><br />
+
+                    <asp:Button ID="hotelSubmitBtn" runat="server" Text="Reserve Now" />
+                </div>
+
             </div>
         </div>
     </div>

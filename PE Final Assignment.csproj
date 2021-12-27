@@ -1770,6 +1770,7 @@
     <Content Include="petShopPage.aspx" />
     <Content Include="ProfilePage.aspx" />
     <Content Include="SignUp.aspx" />
+    <Content Include="ViewReservation.aspx" />
     <Content Include="Web.config" />
     <Content Include="index.aspx" />
   </ItemGroup>
@@ -1875,6 +1876,13 @@
     </Compile>
     <Compile Include="SignUp.aspx.designer.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewReservation.aspx.cs">
+      <DependentUpon>ViewReservation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewReservation.aspx.designer.cs">
+      <DependentUpon>ViewReservation.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
