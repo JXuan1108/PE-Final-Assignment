@@ -52,59 +52,46 @@
                                     <asp:ListItem Value="3">Ex-Large</asp:ListItem>
                                 </asp:DropDownList> <br />
 
-                                <asp:CheckBox ID="dogBathCb" runat="server" AutoPostBack="True" />
-                                <asp:Label ID="dogBathL" runat="server" Text="Bath"></asp:Label>
-                                 <br />
-
-                                <asp:CheckBox ID="dogCutCb" runat="server" AutoPostBack="True"/> 
-                                <asp:Label ID="dogCutL" runat="server" Text="Cut"></asp:Label>
+                                <asp:CheckBox ID="dogBathCb" runat="server" AutoPostBack="True" Text="Bath" />
+                                <br />
+                                <asp:CheckBox ID="dogCutCb" runat="server" AutoPostBack="True" Text="Cut" />
                                 <br />
 
-                                <asp:CheckBox ID="dogAromaCb" runat="server" AutoPostBack="True"/> 
-                                <asp:Label ID="dogAromaL" runat="server" Text="Aromatheraphy System"></asp:Label>
+                                <asp:CheckBox ID="dogAromaCb" runat="server" AutoPostBack="True" Text="Aromatheraphy System" />
                                 <br />
 
-                                <asp:CheckBox ID="dogMassageCb" runat="server" AutoPostBack="True"/> 
-                                <asp:Label ID="dogMassageL" runat="server" Text="Aroma Oil Massage"></asp:Label>
+                                <asp:CheckBox ID="dogMassageCb" runat="server" AutoPostBack="True" Text="Aroma Oil Massage"/>
                                 <br />
 
-                                <asp:CheckBox ID="dogTickCb" runat="server" AutoPostBack="True" /> 
-                                <asp:Label ID="dogTickL" runat="server" Text="Tick Treatment"></asp:Label>
+                                <asp:CheckBox ID="dogTickCb" runat="server" AutoPostBack="True" Text="Tick Treatment" />
                                 <br />
 
-                                <asp:CheckBox ID="dogSciCutCb" runat="server"  AutoPostBack="True" /> 
-                                <asp:Label ID="dogSciCutL" runat="server" Text="Scissor Cut"></asp:Label>
+                                <asp:CheckBox ID="dogSciCutCb" runat="server" AutoPostBack="True" Text="Scissor Cut" />
                                 <br />
 
-                                <asp:CheckBox ID="dogDetanglingCb" runat="server"  AutoPostBack="True" />
-                                <asp:Label ID="dogDetanglingL" runat="server" Text="Detangling"></asp:Label>
+                                <asp:CheckBox ID="dogDetanglingCb" runat="server" AutoPostBack="True" Text="Detangling" />
                                 <br />
 
                                 <div class="form-group d-grid gap-2" style="margin-top: 20px">
-                                    <asp:Button ID="dogSubmitBtn" CssClass="btn btn-primary " runat="server" Text="Reserve Now" OnClick="dogSubmitBtn_Click" />
+                                <asp:Button ID="dogSubmitBtn" CssClass="btn btn-primary " runat="server" Text="Reserve Now" OnClick="dogSubmitBtn_Click" />
                                 </div>
-                            </div>
+                                </div>
 
-                            <div id="catForm" runat="server">
+                                <div id="catForm" runat="server">
                                 <br />
-                                <asp:CheckBox ID="catBathCb" runat="server" AutoPostBack="True" /> 
-                                <asp:Label ID="catBathL" runat="server" Text="Bath"></asp:Label>
-                                <br />
-
-                                <asp:CheckBox ID="catCutCb" runat="server" AutoPostBack="True" /> 
-                                <asp:Label ID="catCutL" runat="server" Text="Cut"></asp:Label>
+                                <asp:CheckBox ID="catBathCb" runat="server" AutoPostBack="True" Text="Bath" />
                                 <br />
 
-                                <asp:CheckBox ID="catTickCb" runat="server" AutoPostBack="True" /> 
-                                <asp:Label ID="catTickL" runat="server" Text="Tick Treatment"></asp:Label>
+                                <asp:CheckBox ID="catCutCb" runat="server" AutoPostBack="True" Text="Cut"/>
                                 <br />
 
-                                <asp:CheckBox ID="catSciCutCb" runat="server" AutoPostBack="True" /> 
-                                <asp:Label ID="catSciCutL" runat="server" Text="Scissor Cut"></asp:Label>
+                                <asp:CheckBox ID="catTickCb" runat="server" AutoPostBack="True" Text="Tick Treatment" />
                                 <br />
 
-                                <asp:CheckBox ID="catDetanglingCb" runat="server" AutoPostBack="True" /> 
-                                <asp:Label ID="catDetanglingL" runat="server" Text="Detangling"></asp:Label>
+                                <asp:CheckBox ID="catSciCutCb" runat="server" AutoPostBack="True" Text="Scissor Cut"/>
+                                <br />
+
+                                <asp:CheckBox ID="catDetanglingCb" runat="server" AutoPostBack="True" Text="Detangling" />
                                 <br />
 
                                 <div class="form-group d-grid gap-2" style="margin-top: 20px">
@@ -118,11 +105,11 @@
                             <div class="row">
                                 <div class="col">
                                     <asp:Label ID="Label3" runat="server" Text="From:"></asp:Label>
-                                    <asp:TextBox CssClass="form-control" ID="FromDate" runat="server" TextMode="Date"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="FromDate" runat="server" TextMode="Date" AutoPostBack="True"></asp:TextBox>
                                 </div>
                                 <div class="col">
                                     <asp:Label ID="Label2" runat="server" Text="To:"></asp:Label>
-                                    <asp:TextBox CssClass="form-control" ID="ToDate" runat="server" TextMode="Date"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="ToDate" runat="server" TextMode="Date" AutoPostBack="True"></asp:TextBox>
                                 </div>
                             </div>
                             <br />
@@ -130,7 +117,8 @@
                             <asp:Label ID="petTypeL" runat="server"></asp:Label><br />
 
                             <asp:Label ID="Label5" runat="server" Text="Hotel Type:"></asp:Label>
-                            <asp:Label ID="hotelTypeL" runat="server"></asp:Label><br />
+                            <asp:Label ID="hotelTypeL" runat="server"></asp:Label>
+                            <asp:Label ID="hotelTypeRoomL" runat="server"></asp:Label><br />
 
                             <asp:Label ID="Label7" runat="server" Text="Price/day:"></asp:Label>
                             <asp:Label ID="priceRateL" runat="server"></asp:Label><br />

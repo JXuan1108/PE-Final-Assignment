@@ -30,10 +30,6 @@ namespace PE_Final_Assignment
             {
                 checkLogin();
             }
-            else
-            {
-                calcPrice();
-            }
 
             if (Session["SelectedPetService"].ToString() != null)
             {
@@ -53,6 +49,11 @@ namespace PE_Final_Assignment
                     initialiseHotelForm(imgUrl);
                 }
             }
+
+            if (IsPostBack)
+            {
+                calcPrice();
+            }
         }
 
         private void checkLogin()
@@ -64,24 +65,28 @@ namespace PE_Final_Assignment
             }
             else
                 Debug.WriteLine("Session is " + Session["email"].ToString());
-
-
         }
 
         private void calcPrice()
         {
-            
-            CheckDogServicePrice();
-            CheckCatServicePrice();
+            if (ToDate.Text!="" && FromDate.Text!="")
+            {
+                CheckHotelPrice();
+            }
+            else
+            {
+                CheckDogServicePrice();
+                CheckCatServicePrice();
+            }
 
-            if(price == 0)
+            if (price == 0)
             {
                 ServicePrice.Visible = false;
             }
             else
             {
                 ServicePrice.Visible = true;
-                ServicePrice.Text = "<b style='color: red; font-size:2em;' > Reservation Price: RM" + price +"</b>"; 
+                ServicePrice.Text = "<b style='color: red; font-size:2em;' > Reservation Price: RM" + price + "</b>";
             }
         }
 
@@ -138,18 +143,22 @@ namespace PE_Final_Assignment
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("insert into serviceReservation_table (reservation_pet, " +
+                SqlCommand cmd = new SqlCommand("insert into serviceReservation_table (user_email, reservation_pet, " +
                     "reservation_date, reservation_bath, reservation_cut, reservation_tick, reservation_sciCut, " +
-                    "reservation_detangling, reservation_price) values ('cat',@date,@bath,@cut,@tick,@sciCut," +
-                    "@detangling,"+price.ToString()+")", con);
+                    "reservation_detangling, reservation_price) values (@email,'cat',@date,@bath,@cut,@tick,@sciCut," +
+                    "@detangling,@price)", con);
+                cmd.Parameters.AddWithValue("@email", Session["email"].ToString());
                 cmd.Parameters.AddWithValue("@date", ReservationDate.Text.ToString());
                 cmd.Parameters.AddWithValue("@bath", catBathCb.Checked.ToString());
                 cmd.Parameters.AddWithValue("@cut", catCutCb.Checked.ToString());
                 cmd.Parameters.AddWithValue("@tick", catTickCb.Checked.ToString());
                 cmd.Parameters.AddWithValue("@sciCut", catSciCutCb.Checked.ToString());
                 cmd.Parameters.AddWithValue("@detangling", catDetanglingCb.Checked.ToString());
+                cmd.Parameters.AddWithValue("@price", price.ToString());
                 cmd.ExecuteNonQuery();
                 con.Close();
+
+                Response.Redirect("~/ViewReservation.aspx");
             }
             catch (Exception ex)
             {
@@ -166,11 +175,12 @@ namespace PE_Final_Assignment
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("insert into serviceReservation_table (reservation_pet, " +
+                SqlCommand cmd = new SqlCommand("insert into serviceReservation_table (user_email, reservation_pet, " +
                     "reservation_date, reservation_dogSize, reservation_bath, reservation_cut, " +
                     "reservation_dogAroma, reservation_dogMassage, reservation_tick, reservation_sciCut, " +
-                    "reservation_detangling, reservation_price) values ('dog',@date,@dogSize,@bath,@cut," +
-                    "@dogAroma,@dogMassage,@tick,@sciCut,@detangling,"+price.ToString()+")", con);
+                    "reservation_detangling, reservation_price) values (@email,'dog',@date,@dogSize,@bath,@cut," +
+                    "@dogAroma,@dogMassage,@tick,@sciCut,@detangling,@price)", con);
+                cmd.Parameters.AddWithValue("@email", Session["email"].ToString());
                 cmd.Parameters.AddWithValue("@date", ReservationDate.Text.ToString());
                 cmd.Parameters.AddWithValue("@dogSize", dogSizeDDL.SelectedValue.ToString());
                 cmd.Parameters.AddWithValue("@bath", dogBathCb.Checked.ToString());
@@ -180,8 +190,11 @@ namespace PE_Final_Assignment
                 cmd.Parameters.AddWithValue("@tick", dogTickCb.Checked.ToString());
                 cmd.Parameters.AddWithValue("@sciCut", dogSciCutCb.Checked.ToString());
                 cmd.Parameters.AddWithValue("@detangling", dogDetanglingCb.Checked.ToString());
+                cmd.Parameters.AddWithValue("@price", price.ToString());
                 cmd.ExecuteNonQuery();
                 con.Close();
+
+                Response.Redirect("~/ViewReservation.aspx");
             }
             catch (Exception ex)
             {
@@ -201,7 +214,8 @@ namespace PE_Final_Assignment
                 if (imgUrl == @"images/petHotelDogBasic.jpg")
                 {
                     petTypeL.Text = "Dog";
-                    hotelTypeL.Text = "Basic Room";
+                    hotelTypeL.Text = "Basic";
+                    hotelTypeRoomL.Text = " Room";
                     SqlCommand cmd = new SqlCommand("SELECT hotel_price from petHotel_table where hotel_pet='Dog' and hotel_type='Basic'", con);
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.HasRows)
@@ -216,7 +230,8 @@ namespace PE_Final_Assignment
                 if (imgUrl == @"images/petHotelDogDeluxe.jpg")
                 {
                     petTypeL.Text = "Dog";
-                    hotelTypeL.Text = "Deluxe Room";
+                    hotelTypeL.Text = "Deluxe";
+                    hotelTypeRoomL.Text = " Room";
                     SqlCommand cmd = new SqlCommand("SELECT hotel_price from petHotel_table where hotel_pet='Dog' and hotel_type='Deluxe'", con);
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.HasRows)
@@ -231,7 +246,8 @@ namespace PE_Final_Assignment
                 if (imgUrl == @"images/petHotelDogRoyal.jpg")
                 {
                     petTypeL.Text = "Dog";
-                    hotelTypeL.Text = "Royal Suite";
+                    hotelTypeL.Text = "Royal";
+                    hotelTypeRoomL.Text = " Suite";
                     SqlCommand cmd = new SqlCommand("SELECT hotel_price from petHotel_table where hotel_pet='Dog' and hotel_type='Royal'", con);
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.HasRows)
@@ -246,7 +262,8 @@ namespace PE_Final_Assignment
                 if (imgUrl == @"images/petHotel2.jpg")
                 {
                     petTypeL.Text = "Cat";
-                    hotelTypeL.Text = "Basic Room";
+                    hotelTypeL.Text = "Basic";
+                    hotelTypeRoomL.Text = " Room";
                     SqlCommand cmd = new SqlCommand("SELECT hotel_price from petHotel_table where hotel_pet='Cat' and hotel_type='Basic'", con);
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.HasRows)
@@ -261,7 +278,8 @@ namespace PE_Final_Assignment
                 if (imgUrl == @"images/petHotelCatDeluxe.jpg")
                 {
                     petTypeL.Text = "Cat";
-                    hotelTypeL.Text = "Deluxe Room";
+                    hotelTypeL.Text = "Deluxe";
+                    hotelTypeRoomL.Text = " Room";
                     SqlCommand cmd = new SqlCommand("SELECT hotel_price from petHotel_table where hotel_pet='Cat' and hotel_type='Deluxe'", con);
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.HasRows)
@@ -276,7 +294,8 @@ namespace PE_Final_Assignment
                 if (imgUrl == @"images/petHotelCatRoyal.jpg")
                 {
                     petTypeL.Text = "Cat";
-                    hotelTypeL.Text = "Royal Suite";
+                    hotelTypeL.Text = "Royal";
+                    hotelTypeRoomL.Text = " Suite";
                     SqlCommand cmd = new SqlCommand("SELECT hotel_price from petHotel_table where hotel_pet='Cat' and hotel_type='Royal'", con);
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.HasRows)
@@ -297,12 +316,63 @@ namespace PE_Final_Assignment
 
         protected void hotelSubmitBtn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = new SqlCommand("insert into hotelReservation_table (user_email, to_date, from_date, " +
+                    "hotel_pet, hotel_type, price) values (@email,@toDate,@fromDate,@hotelPet,@hotelType,@price)", con);
+                cmd.Parameters.AddWithValue("@email", Session["email"].ToString());
+                cmd.Parameters.AddWithValue("@toDate", ToDate.Text.ToString());
+                cmd.Parameters.AddWithValue("@fromDate", FromDate.Text.ToString());
+                cmd.Parameters.AddWithValue("@hotelPet", petTypeL.Text.ToString());
+                cmd.Parameters.AddWithValue("@hotelType", hotelTypeL.Text.ToString());
+                cmd.Parameters.AddWithValue("@price", price.ToString());
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                Response.Redirect("~/ViewReservation.aspx");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Error in hotelSubmitBtn database connection" + ex);
+            }
+        }
+
+        public void CheckHotelPrice()
+        {
             DateTime fromDate = Convert.ToDateTime(FromDate.Text);
             DateTime toDate = Convert.ToDateTime(ToDate.Text);
 
             int TotalDays = (toDate - fromDate).Days;
             ServicePrice.Visible = true;
-            ServicePrice.Text = "The total days = " + TotalDays;
+
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = new SqlCommand("select hotel_price from petHotel_table where hotel_pet='" + petTypeL.Text + "' and hotel_type='" + hotelTypeL.Text + "'", con);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        price = TotalDays * int.Parse(dr["hotel_price"].ToString());
+                        ServicePrice.Text = "<b style='color: red; font-size:2em;' > Reservation Price: RM" + price + "</b>";
+                    }
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Error in CheckHotelPrice()method database connection" + ex);
+            }
         }
     }
 }
