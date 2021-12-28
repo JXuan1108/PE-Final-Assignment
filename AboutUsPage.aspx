@@ -3,9 +3,9 @@
     <link href="AboutUs.css" rel="stylesheet" type="text/css"/>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<div class="feedbackHeader" align="center" style="margin-top: 1rem; position: relative">
+<div class="feedbackHeader stp" align="center" style="margin-top: 1rem; position: relative">
     <img src="images/aboutUs.jpeg" style="width: 95%"/>
-    <div class="description col-md-5" style="position: absolute; top: 3.8rem; left: 4rem; background-color: rgba(255, 255, 255, 0.7); padding: 1.5rem 1.5rem 0.5rem 1.5rem" >
+    <div class="description col-md-5" style="position: absolute; top: 12rem; left: 4rem; background-color: rgba(255, 255, 255, 0.7); padding: 1.5rem 1.5rem 0.5rem 1.5rem" >
 		<h1 style="font-family: coiny; font-size: 3rem">About Us</h1>
 			 
 		<h3 style="border-top-style: double; border-bottom-style: double; line-height: 2.8rem">PETS ARE FAMILY TOO!</h3>

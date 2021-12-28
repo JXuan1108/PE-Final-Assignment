@@ -85,6 +85,19 @@ li {
     text-decoration: none !important;
 }
 
+.navbar-btm-shadow {
+    box-shadow: 0 0.5rem 0.5rem rgb(0 0 0 / 50%);
+    background-color: #faf6f2;
+}
+
+.stp {
+    padding-top: 8rem;
+}
+
+.lbHovNon:hover {
+    color:black;
+}
+
 /*Feedback page*/
 .star1 {
     background-image: url(images/angry.png);
@@ -359,7 +372,22 @@ li {
     transform: rotate(15deg);
 }
 
+.cloud {
+    position: absolute;
+    top: -23rem;
+}
+
+.grass {
+    background-color: #a6c273;
+    height: 25rem;
+    padding-top: 9rem;
+    padding-bottom: 31rem;
+    border-radius: 55% 55% 0 0;
+    box-shadow: 0px 0.2px 20px 1px #09250799, 0 6px 20px 0 rgb(123 150 71);
+}
+
 /* groomReservationPage*/
 .serviceImg {
     width: inherit;
+    
 }

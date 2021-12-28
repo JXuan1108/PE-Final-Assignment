@@ -27,7 +27,7 @@ namespace PE_Final_Assignment
             }
             else
             {
-
+                calcPrice();
             }
 
             if (Session["SelectedPetService"].ToString() != null)
@@ -41,17 +41,25 @@ namespace PE_Final_Assignment
                     catForm.Visible = true;
             }
 
-            calcPrice();
+            
 
         }
 
         private void calcPrice()
         {
-            int SelectedIndex = int.Parse(dogSizeDDL.SelectedValue);
-
-            CheckDogServicePrice(SelectedIndex);
+            
+            CheckDogServicePrice();
             CheckCatServicePrice();
-            ServicePrice.Text = "RM"+price;
+
+            if(price == 0)
+            {
+                ServicePrice.Visible = false;
+            }
+            else
+            {
+                ServicePrice.Visible = true;
+                ServicePrice.Text = "<b style='color: red; font-size:2em;' > Reservation Price: RM" + price +"</b>"; 
+            }
         }
 
         private void hideForm()
@@ -60,8 +68,10 @@ namespace PE_Final_Assignment
             catForm.Visible = false;
         }
 
-        private void CheckDogServicePrice(int SelectedIndex)
+        private void CheckDogServicePrice()
         {
+            int SelectedIndex = int.Parse(dogSizeDDL.SelectedValue);
+
             if (dogBathCb.Checked)
                 price += dogBathList[SelectedIndex];
             if (dogCutCb.Checked)

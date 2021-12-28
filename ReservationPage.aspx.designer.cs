@@ -33,6 +33,15 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.Label ServicePrice;
 
         /// <summary>
+        /// DateLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label DateLabel;
+
+        /// <summary>
         /// ReservationDate control.
         /// </summary>
         /// <remarks>
@@ -69,15 +78,6 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.DropDownList dogSizeDDL;
 
         /// <summary>
-        /// dogBathL control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label dogBathL;
-
-        /// <summary>
         /// dogBathCb control.
         /// </summary>
         /// <remarks>
@@ -87,13 +87,13 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.CheckBox dogBathCb;
 
         /// <summary>
-        /// dogCutL control.
+        /// dogBathL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label dogCutL;
+        protected global::System.Web.UI.WebControls.Label dogBathL;
 
         /// <summary>
         /// dogCutCb control.
@@ -105,13 +105,13 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.CheckBox dogCutCb;
 
         /// <summary>
-        /// dogAromaL control.
+        /// dogCutL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label dogAromaL;
+        protected global::System.Web.UI.WebControls.Label dogCutL;
 
         /// <summary>
         /// dogAromaCb control.
@@ -123,13 +123,13 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.CheckBox dogAromaCb;
 
         /// <summary>
-        /// dogMassageL control.
+        /// dogAromaL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label dogMassageL;
+        protected global::System.Web.UI.WebControls.Label dogAromaL;
 
         /// <summary>
         /// dogMassageCb control.
@@ -141,13 +141,13 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.CheckBox dogMassageCb;
 
         /// <summary>
-        /// dogTickL control.
+        /// dogMassageL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label dogTickL;
+        protected global::System.Web.UI.WebControls.Label dogMassageL;
 
         /// <summary>
         /// dogTickCb control.
@@ -159,13 +159,13 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.CheckBox dogTickCb;
 
         /// <summary>
-        /// dogSciCutL control.
+        /// dogTickL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label dogSciCutL;
+        protected global::System.Web.UI.WebControls.Label dogTickL;
 
         /// <summary>
         /// dogSciCutCb control.
@@ -177,13 +177,13 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.CheckBox dogSciCutCb;
 
         /// <summary>
-        /// dogDetanglingL control.
+        /// dogSciCutL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label dogDetanglingL;
+        protected global::System.Web.UI.WebControls.Label dogSciCutL;
 
         /// <summary>
         /// dogDetanglingCb control.
@@ -193,6 +193,15 @@ namespace PE_Final_Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox dogDetanglingCb;
+
+        /// <summary>
+        /// dogDetanglingL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label dogDetanglingL;
 
         /// <summary>
         /// dogSubmitBtn control.
@@ -213,15 +222,6 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl catForm;
 
         /// <summary>
-        /// catBathL control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label catBathL;
-
-        /// <summary>
         /// catBathCb control.
         /// </summary>
         /// <remarks>
@@ -231,13 +231,13 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.CheckBox catBathCb;
 
         /// <summary>
-        /// catCutL control.
+        /// catBathL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label catCutL;
+        protected global::System.Web.UI.WebControls.Label catBathL;
 
         /// <summary>
         /// catCutCb control.
@@ -249,13 +249,13 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.CheckBox catCutCb;
 
         /// <summary>
-        /// catTickL control.
+        /// catCutL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label catTickL;
+        protected global::System.Web.UI.WebControls.Label catCutL;
 
         /// <summary>
         /// catTickCb control.
@@ -267,13 +267,13 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.CheckBox catTickCb;
 
         /// <summary>
-        /// catSciCutL control.
+        /// catTickL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label catSciCutL;
+        protected global::System.Web.UI.WebControls.Label catTickL;
 
         /// <summary>
         /// catSciCutCb control.
@@ -285,13 +285,13 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.CheckBox catSciCutCb;
 
         /// <summary>
-        /// catDetanglingL control.
+        /// catSciCutL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label catDetanglingL;
+        protected global::System.Web.UI.WebControls.Label catSciCutL;
 
         /// <summary>
         /// catDetanglingCb control.
@@ -301,6 +301,15 @@ namespace PE_Final_Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox catDetanglingCb;
+
+        /// <summary>
+        /// catDetanglingL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label catDetanglingL;
 
         /// <summary>
         /// catSubmitBtn control.

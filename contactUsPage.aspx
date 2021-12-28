@@ -3,7 +3,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container">
+    <div class="container stp">
         <div class="row" style="border-bottom: 2px dashed #8b0000;">
             <div class="col-lg-12" align="center">
                 <h1 class="mt-4 p-2" style="font-family: coiny; font-size: 3rem">Contact Us</h1>

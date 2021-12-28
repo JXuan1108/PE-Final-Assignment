@@ -3,7 +3,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="margin-top: 1rem">
+    <div id="carouselExampleIndicators" class="carousel slide stp" data-bs-ride="carousel" style="margin-top: 1rem">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -48,7 +48,7 @@
 					<asp:ImageButton ID="petShopButton" runat="server" imageUrl="images/petShop.jpeg" style="height: 22rem; width: 22rem" OnClick="petShopButton_Click"/>
 				</div>
 				  <div class="middle" align="center">
-					<h2 style="font-family: quicksand_bold" class="text">Pet Shop</h2>
+					  <asp:LinkButton ID="lbPetShop" runat="server" CssClass="linkButton text lbHovNon" style="font-family: quicksand_bold; font-size: 2em;" PostBackUrl="~/petShopPage.aspx">Pet Shop</asp:LinkButton>
 				  </div>
 			</div>
 			
@@ -57,7 +57,7 @@
 					<asp:ImageButton ID="petHotelButton" runat="server" imageUrl="images/petHotel.jpeg" style="height: 22rem; width: 22rem" OnClick="petHotelButton_Click"/>
 				</div>
 				  <div class="middle" align="center">
-					<h2 style="font-family: quicksand_bold" class="text">Pet Hotel</h2>
+					<asp:LinkButton ID="lbHotel" runat="server" CssClass="linkButton text lbHovNon" style="font-family: quicksand_bold; font-size: 2em;" PostBackUrl="~/petHotelPage.aspx">Pet Hotel</asp:LinkButton>
 				  </div>
 			</div>
 			
@@ -66,7 +66,7 @@
 					<asp:ImageButton ID="petGroomingButton" runat="server" imageUrl="images/petCare.jpeg" style="height: 22rem; width: 22rem" OnClick="petGroomingButton_Click"/>
 				</div>
 				  <div class="middle" align="center">
-					<h2 style="font-family: quicksand_bold" class="text">Pet Grooming</h2>
+					<asp:LinkButton ID="lbGroom" runat="server" CssClass="linkButton text lbHovNon" style="font-family: quicksand_bold; font-size: 2em;" PostBackUrl="~/petGroomingPage.aspx">Pet Grooming</asp:LinkButton>
 				  </div>
 			</div>
 		</div>

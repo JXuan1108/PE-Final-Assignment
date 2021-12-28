@@ -1725,6 +1725,7 @@
     <Content Include="fontawesome\webfonts\fa-solid-900.svg" />
     <Content Include="forgotPasswordPage.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="images\lower-cloud.png" />
     <Content Include="ReservationPage.aspx" />
     <Content Include="images\aboutUs.jpeg" />
     <Content Include="images\angry.png" />

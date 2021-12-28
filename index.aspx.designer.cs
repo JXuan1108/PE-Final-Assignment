@@ -24,6 +24,15 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.ImageButton petShopButton;
 
         /// <summary>
+        /// lbPetShop control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbPetShop;
+
+        /// <summary>
         /// petHotelButton control.
         /// </summary>
         /// <remarks>
@@ -33,6 +42,15 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.ImageButton petHotelButton;
 
         /// <summary>
+        /// lbHotel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbHotel;
+
+        /// <summary>
         /// petGroomingButton control.
         /// </summary>
         /// <remarks>
@@ -40,5 +58,14 @@ namespace PE_Final_Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton petGroomingButton;
+
+        /// <summary>
+        /// lbGroom control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbGroom;
     }
 }
