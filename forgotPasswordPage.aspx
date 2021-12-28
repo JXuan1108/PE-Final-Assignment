@@ -2,10 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container stp" style="margin-top: 30px">
+    <div class="container start-page" style="margin-top: 30px">
         <div class="row">
             <div class="col-md-6 mx-auto">
-                <div class="card">
+                <div class="card box-shadow1">
                     <div class="card-body">
                         <div class="row">
                             <div class="row">

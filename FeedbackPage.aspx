@@ -3,7 +3,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="feedbackHeader stp" align="center" style="margin-top: 1rem; position: relative">
+    <div class="feedbackHeader start-page" align="center" style="margin-top: 1rem; position: relative">
         <img src="images/feedback_header.jpeg" style="width:100%"/>
         <div class="description" style="position: absolute; top: 12rem; left: 5.5rem">
 			<h1 style="font-size: 3.2rem; font-family: pacifico; font-weight: 300"><b> We'd love to <br> hear from you</b></h1>

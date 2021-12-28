@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1 class="mt-3 p-2" style="font-family: coiny; font-size: 3rem" align="center">Pet Hotel</h1>
+    <h1 class="p-2" style="font-family: coiny; font-size: 3rem; margin-top: 7rem" align="center">Pet Hotel</h1>
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="margin-top: 1rem">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -40,14 +41,22 @@ namespace PE_Final_Assignment
 
         protected void logout_Click(object sender, EventArgs e)
         {
-            Session["email"] = "";
-            Session["FName"] = "";
-            Session["LName"] = "";
-            Session["role"] = "";
+            Session["email"] = null;
+            Session["FName"] = null;
+            Session["LName"] = null;
+            Session["role"] = null;
+
+            if (Session["email"] == null)
+            {
+                Debug.WriteLine("Session is null");
+            }
+            else
+                Debug.WriteLine("Session is " + Session["email"].ToString());
 
             login.Visible = true; //login button
             logout.Visible = false; //logout button
             profile.Visible = false; //profile button
+            Response.Redirect("~/index.aspx");
         }
 
         protected void profile_Click(object sender, EventArgs e)

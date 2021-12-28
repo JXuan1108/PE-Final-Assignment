@@ -14,7 +14,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container">
+    <div class="container start-page">
         <h1>Dog table</h1>
         <asp:DataList ID="dogDatalist"  runat="server" OnDeleteCommand="dogDatalist_DeleteCommand">
             <ItemTemplate>

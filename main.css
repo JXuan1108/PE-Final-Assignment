@@ -3,6 +3,10 @@
     background-color: #faf6f2;
 }
 
+.box-shadow1 {
+    box-shadow: 0 0 0 0.2px rgb(255 255 255), 0.1em 0.1em 0.3em rgb(0 0 0 / 30%);
+}
+
 @font-face {
     font-family: roboto;
     src: url('fonts/Roboto-Regular.ttf');
@@ -90,7 +94,7 @@ li {
     background-color: #faf6f2;
 }
 
-.stp {
+.start-page {
     padding-top: 8rem;
 }
 
@@ -386,8 +390,15 @@ li {
     box-shadow: 0px 0.2px 20px 1px #09250799, 0 6px 20px 0 rgb(123 150 71);
 }
 
-/* groomReservationPage*/
+/* ReservationPage*/
 .serviceImg {
     width: inherit;
-    
+}
+
+.bc {
+    background-color: white;
+    border-radius: 12px 12px 12px 12px;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
 }

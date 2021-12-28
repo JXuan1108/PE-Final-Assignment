@@ -8,10 +8,10 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container" style="margin-top: 10px; padding-bottom: 50px">
+    <div class="container start-page" style="margin-top: 10px; padding-bottom: 50px">
         <div class="row">
             <div class="col-md-6 mx-auto">
-                <div class="card">
+                <div class="card box-shadow1">
                     <div class="card-body">
                         <div class="row">
                             <div class="col" align="center">

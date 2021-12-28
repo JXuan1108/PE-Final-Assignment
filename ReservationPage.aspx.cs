@@ -28,7 +28,7 @@ namespace PE_Final_Assignment
 
             if (!IsPostBack)
             {
-
+                checkLogin();
             }
             else
             {
@@ -46,12 +46,25 @@ namespace PE_Final_Assignment
                     catForm.Visible = true;
                 else
                 {
+                    dateGroomDiv.Visible = false;
+                    groomBc.Visible = false;
+                    hotelBc.Visible = true;
                     hotelForm.Visible = true;
                     initialiseHotelForm(imgUrl);
                 }
             }
+        }
 
-            
+        private void checkLogin()
+        {
+            if (Session["email"] == null)
+            {
+                Debug.WriteLine("Session is null");
+                Response.Redirect("~/LoginPage.aspx");
+            }
+            else
+                Debug.WriteLine("Session is " + Session["email"].ToString());
+
 
         }
 
@@ -74,9 +87,12 @@ namespace PE_Final_Assignment
 
         private void hideForm()
         {
+            hotelBc.Visible = false;
+
             dogForm.Visible = false;
             catForm.Visible = false;
             hotelForm.Visible = false;
+            
         }
 
         private void CheckDogServicePrice()
@@ -277,6 +293,16 @@ namespace PE_Final_Assignment
             {
                 Debug.WriteLine("Error pet hotel database conenction" + ex);
             }
+        }
+
+        protected void hotelSubmitBtn_Click(object sender, EventArgs e)
+        {
+            DateTime fromDate = Convert.ToDateTime(FromDate.Text);
+            DateTime toDate = Convert.ToDateTime(ToDate.Text);
+
+            int TotalDays = (toDate - fromDate).Days;
+            ServicePrice.Visible = true;
+            ServicePrice.Text = "The total days = " + TotalDays;
         }
     }
 }
