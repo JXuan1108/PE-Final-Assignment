@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,6 +13,7 @@ namespace PE_Final_Assignment
 {
     public partial class ReservationPage : System.Web.UI.Page
     {
+        string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
 
         List<int> dogBathList = new List<int> { 75, 95, 125, 165};
         List<int> dogCutList = new List<int> { 55, 75, 105, 145};
@@ -37,8 +42,13 @@ namespace PE_Final_Assignment
 
                 if (imgUrl == @"images/dogGroomPrice.jpg")
                     dogForm.Visible = true;
-                else
+                else if (imgUrl == @"images/catGroomPrice.jpg")
                     catForm.Visible = true;
+                else
+                {
+                    hotelForm.Visible = true;
+                    initialiseHotelForm(imgUrl);
+                }
             }
 
             
@@ -66,6 +76,7 @@ namespace PE_Final_Assignment
         {
             dogForm.Visible = false;
             catForm.Visible = false;
+            hotelForm.Visible = false;
         }
 
         private void CheckDogServicePrice()
@@ -104,12 +115,168 @@ namespace PE_Final_Assignment
 
         protected void catSubmitBtn_Click(object sender, EventArgs e)
         {
-           //database conn
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = new SqlCommand("insert into serviceReservation_table (reservation_pet, " +
+                    "reservation_date, reservation_bath, reservation_cut, reservation_tick, reservation_sciCut, " +
+                    "reservation_detangling, reservation_price) values ('cat',@date,@bath,@cut,@tick,@sciCut," +
+                    "@detangling,"+price.ToString()+")", con);
+                cmd.Parameters.AddWithValue("@date", ReservationDate.Text.ToString());
+                cmd.Parameters.AddWithValue("@bath", catBathCb.Checked.ToString());
+                cmd.Parameters.AddWithValue("@cut", catCutCb.Checked.ToString());
+                cmd.Parameters.AddWithValue("@tick", catTickCb.Checked.ToString());
+                cmd.Parameters.AddWithValue("@sciCut", catSciCutCb.Checked.ToString());
+                cmd.Parameters.AddWithValue("@detangling", catDetanglingCb.Checked.ToString());
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Error in dogSubmitButton database connection" + ex);
+            }
         }
 
         protected void dogSubmitBtn_Click(object sender, EventArgs e)
         {
-            //database conn
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = new SqlCommand("insert into serviceReservation_table (reservation_pet, " +
+                    "reservation_date, reservation_dogSize, reservation_bath, reservation_cut, " +
+                    "reservation_dogAroma, reservation_dogMassage, reservation_tick, reservation_sciCut, " +
+                    "reservation_detangling, reservation_price) values ('dog',@date,@dogSize,@bath,@cut," +
+                    "@dogAroma,@dogMassage,@tick,@sciCut,@detangling,"+price.ToString()+")", con);
+                cmd.Parameters.AddWithValue("@date", ReservationDate.Text.ToString());
+                cmd.Parameters.AddWithValue("@dogSize", dogSizeDDL.SelectedValue.ToString());
+                cmd.Parameters.AddWithValue("@bath", dogBathCb.Checked.ToString());
+                cmd.Parameters.AddWithValue("@cut", dogCutCb.Checked.ToString());
+                cmd.Parameters.AddWithValue("@dogAroma", dogAromaCb.Checked.ToString());
+                cmd.Parameters.AddWithValue("@dogMassage", dogMassageCb.Checked.ToString());
+                cmd.Parameters.AddWithValue("@tick", dogTickCb.Checked.ToString());
+                cmd.Parameters.AddWithValue("@sciCut", dogSciCutCb.Checked.ToString());
+                cmd.Parameters.AddWithValue("@detangling", dogDetanglingCb.Checked.ToString());
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Error in dogSubmitButton database connection" + ex);
+            }
+        }
+
+        public void initialiseHotelForm(String imgUrl)
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                if (imgUrl == @"images/petHotelDogBasic.jpg")
+                {
+                    petTypeL.Text = "Dog";
+                    hotelTypeL.Text = "Basic Room";
+                    SqlCommand cmd = new SqlCommand("SELECT hotel_price from petHotel_table where hotel_pet='Dog' and hotel_type='Basic'", con);
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                        {
+                            priceRateL.Text = dr["hotel_price"].ToString();
+                        }
+                    }
+                    con.Close();
+                }
+                if (imgUrl == @"images/petHotelDogDeluxe.jpg")
+                {
+                    petTypeL.Text = "Dog";
+                    hotelTypeL.Text = "Deluxe Room";
+                    SqlCommand cmd = new SqlCommand("SELECT hotel_price from petHotel_table where hotel_pet='Dog' and hotel_type='Deluxe'", con);
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                        {
+                            priceRateL.Text = dr["hotel_price"].ToString();
+                        }
+                    }
+                    con.Close();
+                }
+                if (imgUrl == @"images/petHotelDogRoyal.jpg")
+                {
+                    petTypeL.Text = "Dog";
+                    hotelTypeL.Text = "Royal Suite";
+                    SqlCommand cmd = new SqlCommand("SELECT hotel_price from petHotel_table where hotel_pet='Dog' and hotel_type='Royal'", con);
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                        {
+                            priceRateL.Text = dr["hotel_price"].ToString();
+                        }
+                    }
+                    con.Close();
+                }
+                if (imgUrl == @"images/petHotel2.jpg")
+                {
+                    petTypeL.Text = "Cat";
+                    hotelTypeL.Text = "Basic Room";
+                    SqlCommand cmd = new SqlCommand("SELECT hotel_price from petHotel_table where hotel_pet='Cat' and hotel_type='Basic'", con);
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                        {
+                            priceRateL.Text = dr["hotel_price"].ToString();
+                        }
+                    }
+                    con.Close();
+                }
+                if (imgUrl == @"images/petHotelCatDeluxe.jpg")
+                {
+                    petTypeL.Text = "Cat";
+                    hotelTypeL.Text = "Deluxe Room";
+                    SqlCommand cmd = new SqlCommand("SELECT hotel_price from petHotel_table where hotel_pet='Cat' and hotel_type='Deluxe'", con);
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                        {
+                            priceRateL.Text = dr["hotel_price"].ToString();
+                        }
+                    }
+                    con.Close();
+                }
+                if (imgUrl == @"images/petHotelCatRoyal.jpg")
+                {
+                    petTypeL.Text = "Cat";
+                    hotelTypeL.Text = "Royal Suite";
+                    SqlCommand cmd = new SqlCommand("SELECT hotel_price from petHotel_table where hotel_pet='Cat' and hotel_type='Royal'", con);
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                        {
+                            priceRateL.Text = dr["hotel_price"].ToString();
+                        }
+                    }
+                    con.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Error pet hotel database conenction" + ex);
+            }
         }
     }
 }

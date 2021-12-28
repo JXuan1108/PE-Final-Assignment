@@ -42,7 +42,7 @@
                 <asp:Label ID="hotelSizeDogBasic" runat="server"></asp:Label>
                 <span class="planSubTitle tab">Price:</span>
                 <asp:Label ID="hotelPriceDogBasic" runat="server"></asp:Label>
-                <asp:Button id="buttonDogBasic" class="requestButton" runat="server" Text="Request"/>
+                <asp:Button id="buttonDogBasic" class="requestButton" runat="server" Text="Request" OnClick="buttonDogBasic_Click"/>
             </div>
         </div>
         <div class="planDiv">
@@ -57,7 +57,7 @@
                 <asp:Label ID="hotelSizeDogDeluxe" runat="server"></asp:Label>
                 <span class="planSubTitle tab">Price:</span>
                 <asp:Label ID="hotelPriceDogDeluxe" runat="server"></asp:Label>
-                <asp:Button id="buttonBogDeluxe" class="requestButton" runat="server" Text="Request"/>
+                <asp:Button id="buttonBogDeluxe" class="requestButton" runat="server" Text="Request" OnClick="buttonBogDeluxe_Click"/>
             </div>
         </div>
         <div class="planDiv">
@@ -72,7 +72,7 @@
                 <asp:Label ID="hotelSizeDogRoyal" runat="server"></asp:Label>
                 <span class="planSubTitle tab">Price:</span>
                 <asp:Label ID="hotelPriceDogRoyal" runat="server"></asp:Label>
-                <asp:Button id="buttonBogRoyal" class="requestButton" runat="server" Text="Request"/>
+                <asp:Button id="buttonBogRoyal" class="requestButton" runat="server" Text="Request" OnClick="buttonBogRoyal_Click"/>
             </div>
         </div>
     </div>
@@ -91,7 +91,7 @@
                 <asp:Label ID="hotelSizeCatBasic" runat="server"></asp:Label>
                 <span class="planSubTitle tab">Price:</span>
                 <asp:Label ID="hotelPriceCatBasic" runat="server"></asp:Label>
-                <asp:Button id="buttonCatBasic" class="requestButton" runat="server" Text="Request"/>
+                <asp:Button id="buttonCatBasic" class="requestButton" runat="server" Text="Request" OnClick="buttonCatBasic_Click"/>
             </div>
         </div>
         <div class="planDiv">
@@ -106,7 +106,7 @@
                 <asp:Label ID="hotelSizeCatDeluxe" runat="server"></asp:Label>
                 <span class="planSubTitle tab">Price:</span>
                 <asp:Label ID="hotelPriceCatDeluxe" runat="server"></asp:Label>
-                <asp:Button id="buttonCatDeluxe" class="requestButton" runat="server" Text="Request"/>
+                <asp:Button id="buttonCatDeluxe" class="requestButton" runat="server" Text="Request" OnClick="buttonCatDeluxe_Click"/>
             </div>
         </div>
         <div class="planDiv">
@@ -121,7 +121,7 @@
                 <asp:Label ID="hotelSizeCatRoyal" runat="server"></asp:Label>
                 <span class="planSubTitle tab">Price:</span>
                 <asp:Label ID="hotelPriceCatRoyal" runat="server"></asp:Label>
-                <asp:Button id="buttonCatRoyal" class="requestButton" runat="server" Text="Request"/>
+                <asp:Button id="buttonCatRoyal" class="requestButton" runat="server" Text="Request" OnClick="buttonCatRoyal_Click"/>
             </div>
         </div>
     </div>
