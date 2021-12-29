@@ -22,6 +22,8 @@ namespace PE_Final_Assignment
             }
 
             getReservationList();
+
+
         }
 
         private void checkLogin()
@@ -52,6 +54,9 @@ namespace PE_Final_Assignment
                 DataTable dt = new DataTable();
                 if (dr.HasRows)
                 {
+
+                    dogTable.Visible = true;
+
                     dt.Columns.Add("Date");
                     dt.Columns.Add("Size");
                     dt.Columns.Add("Services");
@@ -70,9 +75,31 @@ namespace PE_Final_Assignment
                         serviceList.Add(dr["reservation_detangling"].ToString());
                         services = getDogServices(serviceList);
 
-                        dt.Rows.Add(dr["reservation_date"].ToString(), dr["reservation_dogSize"].ToString(), services, dr["reservation_price"].ToString(), dr["reservation_id"].ToString());
+                        String dogSize = "";
+                        int size = int.Parse(dr["reservation_dogSize"].ToString());
+                        switch (size)
+                        {
+                            case 0:
+                                dogSize = "Small";
+                                break;
+                            case 1:
+                                dogSize = "Medium";
+                                break;
+                            case 2:
+                                dogSize = "Large";
+                                break;
+                            case 3:
+                                dogSize = "Ex-Large";
+                                break;
+                        }
+                        dt.Rows.Add(dr["reservation_date"].ToString(), dogSize, services, dr["reservation_price"].ToString(), dr["reservation_id"].ToString());
                     }
                 }
+                else
+                    dogTable.Visible = false;
+
+                    
+
                 dogDatalist.DataSource = dt;
                 dogDatalist.DataBind();
                 con.Close();
@@ -89,6 +116,7 @@ namespace PE_Final_Assignment
                 DataTable dt1 = new DataTable();
                 if (dr1.HasRows)
                 {
+                    catTable.Visible = true;
                     dt1.Columns.Add("Date");
                     dt1.Columns.Add("Services");
                     dt1.Columns.Add("Price");
@@ -107,6 +135,9 @@ namespace PE_Final_Assignment
                         dt1.Rows.Add(dr1["reservation_date"].ToString(), services1, dr1["reservation_price"].ToString(), dr1["reservation_id"].ToString());
                     }
                 }
+                else
+                    catTable.Visible = false;
+                
                 catDatalist.DataSource = dt1;
                 catDatalist.DataBind();
                 con.Close();
@@ -121,6 +152,7 @@ namespace PE_Final_Assignment
                 DataTable dt2 = new DataTable();
                 if (dr2.HasRows)
                 {
+                    hotelTable.Visible = true;
                     dt2.Columns.Add("ToDate");
                     dt2.Columns.Add("FromDate");
                     dt2.Columns.Add("HotelPet");
@@ -133,6 +165,8 @@ namespace PE_Final_Assignment
                         dt2.Rows.Add(dr2["to_date"].ToString(), dr2["from_date"].ToString(), dr2["hotel_pet"].ToString(), dr2["hotel_type"].ToString(), dr2["price"].ToString(), dr2["hotelreservation_id"].ToString());
                     }
                 }
+                else
+                    hotelTable.Visible = false;
                 hotelDatalist.DataSource = dt2;
                 hotelDatalist.DataBind();
                 con.Close();
@@ -141,19 +175,31 @@ namespace PE_Final_Assignment
             {
                 Debug.WriteLine("Error" + ex);
             }
+
+            if (dogTable.Visible == false && catTable.Visible == false && hotelTable.Visible == false)
+                tableState.Visible = true;
         }
 
         public String getDogServices(List<String> serviceList)
         {
             String services="";
             String[] service = {"Bath","Cut","Aromatherapy System","Aroma Oil Massage","Tick Treatment","Scissor Cut","Detangling"};
-
+            List<String> selected = new List<string>();
+            
             for(int i=0;i<serviceList.Count;i++)
             {
                 if (serviceList[i].Equals("True"))
                 {
-                    services = services + "<br/> "+ service[i];
+                    selected.Add(service[i]);
                 }
+            }
+
+            for(int i=0; i<selected.Count; i++)
+            {
+                if (i == (selected.Count - 1))
+                    services += selected[i];
+                else
+                    services += selected[i] + " / ";
             }
 
             return services;
@@ -163,13 +209,22 @@ namespace PE_Final_Assignment
         {
             String services = "";
             String[] service = { "Bath", "Cut", "Tick Treatment", "Scissor Cut", "Detangling" };
+            List<String> selected = new List<string>();
 
             for (int i = 0; i < serviceList.Count; i++)
             {
                 if (serviceList[i].Equals("True"))
                 {
-                    services = services + "<br/> " + service[i];
+                    selected.Add(service[i]);
                 }
+            }
+
+            for (int i = 0; i < selected.Count; i++)
+            {
+                if (i == (selected.Count - 1))
+                    services += selected[i];
+                else
+                    services += selected[i] + " / ";
             }
 
             return services;
@@ -246,5 +301,6 @@ namespace PE_Final_Assignment
                 Debug.WriteLine("Error" + ex);
             }
         }
+
     }
 }

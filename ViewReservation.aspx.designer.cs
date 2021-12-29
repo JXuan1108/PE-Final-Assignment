@@ -15,6 +15,24 @@ namespace PE_Final_Assignment
     {
 
         /// <summary>
+        /// tableState control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label tableState;
+
+        /// <summary>
+        /// dogTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dogTable;
+
+        /// <summary>
         /// dogDatalist control.
         /// </summary>
         /// <remarks>
@@ -24,6 +42,15 @@ namespace PE_Final_Assignment
         protected global::System.Web.UI.WebControls.DataList dogDatalist;
 
         /// <summary>
+        /// catTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl catTable;
+
+        /// <summary>
         /// catDatalist control.
         /// </summary>
         /// <remarks>
@@ -31,6 +58,15 @@ namespace PE_Final_Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataList catDatalist;
+
+        /// <summary>
+        /// hotelTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl hotelTable;
 
         /// <summary>
         /// hotelDatalist control.
