@@ -67,6 +67,7 @@
   <ItemGroup>
     <Content Include="AboutUs.css" />
     <Content Include="AboutUsPage.aspx" />
+    <Content Include="adoptionForm.aspx" />
     <Content Include="bootstrap\css\bootstrap.min.css" />
     <Content Include="bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="contactUsPage.aspx" />
@@ -1723,7 +1724,25 @@
     <Content Include="fontawesome\webfonts\fa-solid-900.svg" />
     <Content Include="forgotPasswordPage.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="images\adopt_cat_blackShortHair.jpeg" />
+    <Content Include="images\adopt_cat_persian.jpeg" />
+    <Content Include="images\adopt_cat_scottish.jpeg" />
+    <Content Include="images\adopt_cat_shortHair.jpeg" />
+    <Content Include="images\adopt_cat_siamsee.jpeg" />
+    <Content Include="images\adopt_cat_tabby.jpeg" />
+    <Content Include="images\adopt_dog_doberman.jpeg" />
+    <Content Include="images\adopt_dog_germanShepherd.jpeg" />
+    <Content Include="images\adopt_dog_goldenRetriever.jpeg" />
+    <Content Include="images\adopt_dog_poodleMix.jpeg" />
+    <Content Include="images\adopt_dog_shepherdMix.jpeg" />
+    <Content Include="images\adopt_dog_shihTzu.jpeg" />
+    <Content Include="images\adopt_other_budgie.jpeg" />
+    <Content Include="images\adopt_other_bunny.jpeg" />
+    <Content Include="images\adopt_other_cockatiel.jpeg" />
+    <Content Include="images\adopt_other_hamster.jpeg" />
+    <Content Include="images\adopt_other_lionhead.jpeg" />
     <Content Include="images\lower-cloud.png" />
+    <Content Include="petAdoptionDetails.aspx" />
     <Content Include="ReservationPage.aspx" />
     <Content Include="images\aboutUs.jpeg" />
     <Content Include="images\angry.png" />
@@ -1766,7 +1785,7 @@
     <Content Include="main.css" />
     <Content Include="petGroomingPage.aspx" />
     <Content Include="petHotelPage.aspx" />
-    <Content Include="petShopPage.aspx" />
+    <Content Include="petAdoption.aspx" />
     <Content Include="ProfilePage.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="ViewReservation.aspx" />
@@ -1780,6 +1799,13 @@
     </Compile>
     <Compile Include="AboutUsPage.aspx.designer.cs">
       <DependentUpon>AboutUsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adoptionForm.aspx.cs">
+      <DependentUpon>adoptionForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adoptionForm.aspx.designer.cs">
+      <DependentUpon>adoptionForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="contactUsPage.aspx.cs">
       <DependentUpon>contactUsPage.aspx</DependentUpon>
@@ -1811,6 +1837,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="petAdoptionDetails.aspx.cs">
+      <DependentUpon>petAdoptionDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="petAdoptionDetails.aspx.designer.cs">
+      <DependentUpon>petAdoptionDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReservationPage.aspx.cs">
       <DependentUpon>ReservationPage.aspx</DependentUpon>
@@ -1847,12 +1880,12 @@
     <Compile Include="petHotelPage.aspx.designer.cs">
       <DependentUpon>petHotelPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="petShopPage.aspx.cs">
-      <DependentUpon>petShopPage.aspx</DependentUpon>
+    <Compile Include="petAdoption.aspx.cs">
+      <DependentUpon>petAdoption.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="petShopPage.aspx.designer.cs">
-      <DependentUpon>petShopPage.aspx</DependentUpon>
+    <Compile Include="petAdoption.aspx.designer.cs">
+      <DependentUpon>petAdoption.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProfilePage.aspx.cs">
       <DependentUpon>ProfilePage.aspx</DependentUpon>

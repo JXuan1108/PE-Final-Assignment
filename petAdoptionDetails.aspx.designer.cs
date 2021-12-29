@@ -11,178 +11,187 @@ namespace PE_Final_Assignment
 {
 
 
-    public partial class petShopPage
+    public partial class petAdoptionDetails
     {
 
         /// <summary>
-        /// cartDiv control.
+        /// hotelBc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cartDiv;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl hotelBc;
 
         /// <summary>
-        /// currentIndex control.
+        /// lbHotelBc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label currentIndex;
+        protected global::System.Web.UI.WebControls.LinkButton lbHotelBc;
 
         /// <summary>
-        /// bookCart control.
+        /// petAdoptionImgHolder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList bookCart;
+        protected global::System.Web.UI.WebControls.Image petAdoptionImgHolder;
 
         /// <summary>
-        /// priceTag control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label priceTag;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// btnCalculate control.
+        /// lbBreed control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCalculate;
+        protected global::System.Web.UI.WebControls.Label lbBreed;
 
         /// <summary>
-        /// btnCheckout control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCheckout;
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// checkoutDiv control.
+        /// lbGender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl checkoutDiv;
+        protected global::System.Web.UI.WebControls.Label lbGender;
 
         /// <summary>
-        /// checkoutFormDiv control.
+        /// Label5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl checkoutFormDiv;
+        protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// tbName control.
+        /// lbAge control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbName;
+        protected global::System.Web.UI.WebControls.Label lbAge;
 
         /// <summary>
-        /// tbEmail control.
+        /// Label7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbEmail;
+        protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
-        /// tbPhone control.
+        /// lbSize control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbPhone;
+        protected global::System.Web.UI.WebControls.Label lbSize;
 
         /// <summary>
-        /// btnSubmitCheckout control.
+        /// Label9 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmitCheckout;
+        protected global::System.Web.UI.WebControls.Label Label9;
 
         /// <summary>
-        /// labelConfirmSubmit control.
+        /// lbColour control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labelConfirmSubmit;
+        protected global::System.Web.UI.WebControls.Label lbColour;
 
         /// <summary>
-        /// genreDiv control.
+        /// Label11 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl genreDiv;
+        protected global::System.Web.UI.WebControls.Label Label11;
 
         /// <summary>
-        /// genrePrompt control.
+        /// lbVaccinated control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label genrePrompt;
+        protected global::System.Web.UI.WebControls.Label lbVaccinated;
 
         /// <summary>
-        /// genre control.
+        /// Label12 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList genre;
+        protected global::System.Web.UI.WebControls.Label Label12;
 
         /// <summary>
-        /// booksViewDiv control.
+        /// lbDewormed control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl booksViewDiv;
+        protected global::System.Web.UI.WebControls.Label lbDewormed;
 
         /// <summary>
-        /// genreSelected control.
+        /// Label13 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label genreSelected;
+        protected global::System.Web.UI.WebControls.Label Label13;
 
         /// <summary>
-        /// BookDataList control.
+        /// lbCondition control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList BookDataList;
+        protected global::System.Web.UI.WebControls.Label lbCondition;
+
+        /// <summary>
+        /// requestAdoptionBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button requestAdoptionBtn;
     }
 }

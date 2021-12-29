@@ -28,7 +28,7 @@ namespace PE_Final_Assignment
                 //Append their name in the beginning of the subject
                 message.Subject = "Paws N' Claws Feedback/Reviews";
 
-                message.Body = "Details of Feedback / Reviews for Layers: " + Environment.NewLine + "Name: " + name.Text + Environment.NewLine + "Contact Number: " + contact.Text
+                message.Body = "Details of Feedback / Reviews for Paws N' Claws: " + Environment.NewLine + "Name: " + name.Text + Environment.NewLine + "Contact Number: " + contact.Text
                     + Environment.NewLine + "Email Address: " + email.Text + Environment.NewLine + "Feedback/Review: " + feedbackText.Text + Environment.NewLine + "Rating: " + Request.Form["star"].ToString();
                 message.IsBodyHtml = false;
 

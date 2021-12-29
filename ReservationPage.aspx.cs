@@ -8,34 +8,29 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
 namespace PE_Final_Assignment
 {
     public partial class ReservationPage : System.Web.UI.Page
     {
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
-
-        List<int> dogBathList = new List<int> { 75, 95, 125, 165};
-        List<int> dogCutList = new List<int> { 55, 75, 105, 145};
+        List<int> dogBathList = new List<int> { 75, 95, 125, 165 };
+        List<int> dogCutList = new List<int> { 55, 75, 105, 145 };
         List<int> dogAromaList = new List<int> { 35, 55, 75, 95 };
         List<int> dogMassageList = new List<int> { 15, 20, 25, 35 };
-
-        int price=0;
-
+        int price = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             hideForm();
-
             if (!IsPostBack)
             {
                 checkLogin();
+                Session["date1"] = null;
+                HotelCalendar.VisibleDate = HotelCalendar.TodaysDate;
             }
-
             if (Session["SelectedPetService"].ToString() != null)
             {
                 string imgUrl = Session["SelectedPetService"].ToString();
                 servicePricesImgHolder.ImageUrl = imgUrl;
-
                 if (imgUrl == @"images/dogGroomPrice.jpg")
                     dogForm.Visible = true;
                 else if (imgUrl == @"images/catGroomPrice.jpg")
@@ -49,13 +44,11 @@ namespace PE_Final_Assignment
                     initialiseHotelForm(imgUrl);
                 }
             }
-
             if (IsPostBack)
             {
                 calcPrice();
             }
         }
-
         private void checkLogin()
         {
             if (Session["email"] == null)
@@ -66,10 +59,9 @@ namespace PE_Final_Assignment
             else
                 Debug.WriteLine("Session is " + Session["email"].ToString());
         }
-
         private void calcPrice()
         {
-            if (ToDate.Text!="" && FromDate.Text!="")
+            if (HotelCalendar.SelectedDates.Count > 1)
             {
                 CheckHotelPrice();
             }
@@ -78,7 +70,6 @@ namespace PE_Final_Assignment
                 CheckDogServicePrice();
                 CheckCatServicePrice();
             }
-
             if (price == 0)
             {
                 ServicePrice.Visible = false;
@@ -89,21 +80,19 @@ namespace PE_Final_Assignment
                 ServicePrice.Text = "<b style='color: red; font-size:2em;' > Reservation Price: RM" + price + "</b>";
             }
         }
-
         private void hideForm()
         {
             hotelBc.Visible = false;
-
+            hotelSubmitBtn.Visible = false;
             dogForm.Visible = false;
             catForm.Visible = false;
             hotelForm.Visible = false;
-            
+            dogSubmitBtn.Visible = false;
+            catSubmitBtn.Visible = false;
         }
-
         private void CheckDogServicePrice()
         {
             int SelectedIndex = int.Parse(dogSizeDDL.SelectedValue);
-
             if (dogBathCb.Checked)
                 price += dogBathList[SelectedIndex];
             if (dogCutCb.Checked)
@@ -118,8 +107,12 @@ namespace PE_Final_Assignment
                 price += 35;
             if (dogDetanglingCb.Checked)
                 price += 20;
+            Debug.WriteLine("ReservationDate variable: " + ReservationDate.Text.ToString());
+            if (price != 0 && (ReservationDate.Text.ToString() != ""))
+                dogSubmitBtn.Visible = true;
+            else
+                dogSubmitBtn.Visible = false;
         }
-
         private void CheckCatServicePrice()
         {
             if (catBathCb.Checked)
@@ -132,8 +125,11 @@ namespace PE_Final_Assignment
                 price += 35;
             if (catDetanglingCb.Checked)
                 price += 20;
+            if (price != 0 && (ReservationDate.Text.ToString() != ""))
+                catSubmitBtn.Visible = true;
+            else
+                catSubmitBtn.Visible = false;
         }
-
         protected void catSubmitBtn_Click(object sender, EventArgs e)
         {
             try
@@ -157,7 +153,6 @@ namespace PE_Final_Assignment
                 cmd.Parameters.AddWithValue("@price", price.ToString());
                 cmd.ExecuteNonQuery();
                 con.Close();
-
                 Response.Redirect("~/ViewReservation.aspx");
             }
             catch (Exception ex)
@@ -165,7 +160,6 @@ namespace PE_Final_Assignment
                 Debug.WriteLine("Error in dogSubmitButton database connection" + ex);
             }
         }
-
         protected void dogSubmitBtn_Click(object sender, EventArgs e)
         {
             try
@@ -193,7 +187,6 @@ namespace PE_Final_Assignment
                 cmd.Parameters.AddWithValue("@price", price.ToString());
                 cmd.ExecuteNonQuery();
                 con.Close();
-
                 Response.Redirect("~/ViewReservation.aspx");
             }
             catch (Exception ex)
@@ -201,7 +194,6 @@ namespace PE_Final_Assignment
                 Debug.WriteLine("Error in dogSubmitButton database connection" + ex);
             }
         }
-
         public void initialiseHotelForm(String imgUrl)
         {
             try
@@ -313,11 +305,11 @@ namespace PE_Final_Assignment
                 Debug.WriteLine("Error pet hotel database conenction" + ex);
             }
         }
-
         protected void hotelSubmitBtn_Click(object sender, EventArgs e)
         {
             try
             {
+                Debug.WriteLine("Hotel Submit From: " + Session["date1"].ToString() + " To: " + HotelCalendar.SelectedDates[HotelCalendar.SelectedDates.Count - 1].ToShortDateString());
                 SqlConnection con = new SqlConnection(strcon);
                 if (con.State == ConnectionState.Closed)
                 {
@@ -326,14 +318,13 @@ namespace PE_Final_Assignment
                 SqlCommand cmd = new SqlCommand("insert into hotelReservation_table (user_email, to_date, from_date, " +
                     "hotel_pet, hotel_type, price) values (@email,@toDate,@fromDate,@hotelPet,@hotelType,@price)", con);
                 cmd.Parameters.AddWithValue("@email", Session["email"].ToString());
-                cmd.Parameters.AddWithValue("@toDate", ToDate.Text.ToString());
-                cmd.Parameters.AddWithValue("@fromDate", FromDate.Text.ToString());
+                cmd.Parameters.AddWithValue("@toDate", HotelCalendar.SelectedDates[HotelCalendar.SelectedDates.Count - 1].ToShortDateString());
+                cmd.Parameters.AddWithValue("@fromDate", Session["date1"].ToString());
                 cmd.Parameters.AddWithValue("@hotelPet", petTypeL.Text.ToString());
                 cmd.Parameters.AddWithValue("@hotelType", hotelTypeL.Text.ToString());
                 cmd.Parameters.AddWithValue("@price", price.ToString());
                 cmd.ExecuteNonQuery();
                 con.Close();
-
                 Response.Redirect("~/ViewReservation.aspx");
             }
             catch (Exception ex)
@@ -341,15 +332,13 @@ namespace PE_Final_Assignment
                 Debug.WriteLine("Error in hotelSubmitBtn database connection" + ex);
             }
         }
-
         public void CheckHotelPrice()
         {
-            DateTime fromDate = Convert.ToDateTime(FromDate.Text);
-            DateTime toDate = Convert.ToDateTime(ToDate.Text);
-
+            DateTime fromDate = Convert.ToDateTime(Session["date1"].ToString());
+            DateTime toDate = HotelCalendar.SelectedDates[HotelCalendar.SelectedDates.Count - 1];
             int TotalDays = (toDate - fromDate).Days;
+            Debug.WriteLine("Total Days Selected: " + TotalDays);
             ServicePrice.Visible = true;
-
             try
             {
                 SqlConnection con = new SqlConnection(strcon);
@@ -372,6 +361,45 @@ namespace PE_Final_Assignment
             catch (Exception ex)
             {
                 Debug.WriteLine("Error in CheckHotelPrice()method database connection" + ex);
+            }
+        }
+        protected void HotelCalendar_SelectionChanged(object sender, EventArgs e)
+        {
+            if (Session["date1"] == null)
+            {
+                Session["date1"] = HotelCalendar.SelectedDate.ToShortDateString();
+                hotelSubmitBtn.Visible = false;
+                Debug.WriteLine("Calender" + Session["date1"]);
+                Debug.WriteLine("1. From: " + Session["date1"].ToString() + " To: " + HotelCalendar.SelectedDate.ToShortDateString());
+            }
+            else
+            {
+                hotelSubmitBtn.Visible = true;
+                DateTime fromDate = Convert.ToDateTime(Session["date1"].ToString());
+                DateTime toDate = Convert.ToDateTime(HotelCalendar.SelectedDate);
+                Debug.WriteLine("2. From: " + Session["date1"].ToString() + " To: " + HotelCalendar.SelectedDate.ToShortDateString());
+                if (toDate == fromDate || fromDate >= toDate)
+                {
+                    ServicePrice.Visible = false;
+                    hotelSubmitBtn.Visible = false;
+                    Debug.WriteLine("3. From: " + Session["date1"].ToString() + " To: " + HotelCalendar.SelectedDate.ToShortDateString());
+                    HotelCalendar.SelectedDates.Clear();
+                    Session["date1"] = null;
+                }
+                else
+                {
+                    Debug.WriteLine("4. From: " + Session["date1"].ToString() + " To: " + HotelCalendar.SelectedDate.ToShortDateString());
+                    HotelCalendar.SelectedDates.SelectRange(fromDate, toDate);
+                    calcPrice();
+                }
+            }
+        }
+        protected void HotelCalendar_DayRender(object sender, DayRenderEventArgs e)
+        {
+            if (e.Day.Date < DateTime.Now.Date)
+            {
+                e.Day.IsSelectable = false;
+                e.Cell.ForeColor = System.Drawing.Color.Gray;
             }
         }
     }
