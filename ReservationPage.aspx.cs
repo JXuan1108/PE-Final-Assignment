@@ -107,7 +107,6 @@ namespace PE_Final_Assignment
                 price += 35;
             if (dogDetanglingCb.Checked)
                 price += 20;
-            Debug.WriteLine("ReservationDate variable: " + ReservationDate.Text.ToString());
             if (price != 0 && (ReservationDate.Text.ToString() != ""))
                 dogSubmitBtn.Visible = true;
             else
@@ -309,7 +308,6 @@ namespace PE_Final_Assignment
         {
             try
             {
-                Debug.WriteLine("Hotel Submit From: " + Session["date1"].ToString() + " To: " + HotelCalendar.SelectedDates[HotelCalendar.SelectedDates.Count - 1].ToShortDateString());
                 SqlConnection con = new SqlConnection(strcon);
                 if (con.State == ConnectionState.Closed)
                 {
@@ -337,7 +335,6 @@ namespace PE_Final_Assignment
             DateTime fromDate = Convert.ToDateTime(Session["date1"].ToString());
             DateTime toDate = HotelCalendar.SelectedDates[HotelCalendar.SelectedDates.Count - 1];
             int TotalDays = (toDate - fromDate).Days;
-            Debug.WriteLine("Total Days Selected: " + TotalDays);
             ServicePrice.Visible = true;
             try
             {
@@ -369,26 +366,21 @@ namespace PE_Final_Assignment
             {
                 Session["date1"] = HotelCalendar.SelectedDate.ToShortDateString();
                 hotelSubmitBtn.Visible = false;
-                Debug.WriteLine("Calender" + Session["date1"]);
-                Debug.WriteLine("1. From: " + Session["date1"].ToString() + " To: " + HotelCalendar.SelectedDate.ToShortDateString());
             }
             else
             {
                 hotelSubmitBtn.Visible = true;
                 DateTime fromDate = Convert.ToDateTime(Session["date1"].ToString());
                 DateTime toDate = Convert.ToDateTime(HotelCalendar.SelectedDate);
-                Debug.WriteLine("2. From: " + Session["date1"].ToString() + " To: " + HotelCalendar.SelectedDate.ToShortDateString());
                 if (toDate == fromDate || fromDate >= toDate)
                 {
                     ServicePrice.Visible = false;
                     hotelSubmitBtn.Visible = false;
-                    Debug.WriteLine("3. From: " + Session["date1"].ToString() + " To: " + HotelCalendar.SelectedDate.ToShortDateString());
                     HotelCalendar.SelectedDates.Clear();
                     Session["date1"] = null;
                 }
                 else
                 {
-                    Debug.WriteLine("4. From: " + Session["date1"].ToString() + " To: " + HotelCalendar.SelectedDate.ToShortDateString());
                     HotelCalendar.SelectedDates.SelectRange(fromDate, toDate);
                     calcPrice();
                 }
