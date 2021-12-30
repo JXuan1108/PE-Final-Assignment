@@ -60,7 +60,7 @@
 						  <img src="images/petPortrait.jpeg" style="height: 100%; width: 100%">
 						  <div class="overlayText2">
 							<h3>Follow Us On Facebook Now!</h3>
-							<h4 style="margin-top: 1rem"><a href="#"><i class="fab fa-facebook" style="padding-right: 1rem; font-size: 2rem"></i></a>Paws & Claws</h4>
+							<h4 style="margin-top: 1rem"><a href="https://www.facebook.com/profile.php?id=100076846110655"><i class="fab fa-facebook" style="padding-right: 1rem; font-size: 2rem"></i></a>Paws & Claws</h4>
 						  </div>
 						</div>
 					</div>

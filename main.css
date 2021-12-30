@@ -357,18 +357,18 @@ li {
 .requestButton {
     background-color: #0d6efd;
     border-radius: 10em;
-    box-shadow: 0rem 0.4rem 0.7rem 0.05rem #00ccff;
-    color: #003399;
+    color: white;
     padding: 0.5em 1em;
     text-align: center;
     transition: all 250ms;
     border: none;
-    margin-left: 6.8rem;
+    margin-left: 9.8rem;
+    font-family: quicksand;
 }
 
 .requestButton:hover {
-    box-shadow: 0rem 0.4rem 0.7rem 0.05rem #00ffff;
     transform: scale(1.05) rotate(-1deg);
+    font-family: quicksand;
 }
 
 /* petGroomingPage */
@@ -412,6 +412,55 @@ li {
 .petAdoptionImg {
     width: 16rem;
     height: 17rem;
+}
+
+.dataList {
+    padding: 2rem 3rem 1rem 3rem;
+    border: 1px solid black;
+}
+
+.templeteStyle {
+    border-spacing: 2rem
+}
+
+/*footer*/
+.footer {
+    padding-top: 2rem;
+    background-color: #333333;
+    margin-left: -6rem;
+}
+
+.footer h4 {
+    font-family: coiny;
+    font-size: 1.8rem;
+    color: #faf6f2;
+}
+
+.footer p {
+    font-family: dooodleista;
+    font-size: 20px;
+    line-height: 0.5rem;
+    color: #faf6f2;
+}
+
+.footer__social ul li {
+    margin-left: -3rem;
+    list-style: none;
+    font-size: 1.1rem;
+    color: #faf6f2;
+}
+
+.footer__social ul li a {
+    display: inline-block;
+    color: #faf6f2;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+
+.footer__about .footer__social a:last-child {
+    margin-right: 0;
 }
 
 /* View Reservation */

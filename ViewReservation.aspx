@@ -20,7 +20,7 @@
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container start-page">
+    <div class="container start-page min-vh-100">
         
         <center>
             <div ID="emptyResDiv" runat="server" Visible="false">

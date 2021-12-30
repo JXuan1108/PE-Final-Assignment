@@ -24,7 +24,9 @@
                 </div>
             </div>
 		</div>
-        <center>   
+
+        <center>
+            <div>
             <br />
             <div class="form-group">
                 <asp:Label ID="Label1" runat="server" style="font-family: coiny" Text="Browse For Pets "></asp:Label> 
@@ -35,12 +37,13 @@
                     <asp:ListItem>Other</asp:ListItem>
                 </asp:DropDownList>
             </div>
-            <br /> 
+            <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> 
+            <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> 
    
-            <asp:DataList ID="petAdoptionDl" runat="server" DataSourceID="SqlDataSourceAll" RepeatColumns="3" Width="48em" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="Solid" BorderWidth="1px" CellPadding="20" CellSpacing="20" GridLines="Both" OnItemCommand="petAdoptionDl_ItemCommand">
+            <asp:DataList ID="petAdoptionDl" runat="server" DataSourceID="SqlDataSourceAll" RepeatColumns="3" Width="64em" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="Solid" BorderWidth="1px"  GridLines="Both" OnItemCommand="petAdoptionDl_ItemCommand" ItemStyle-CssClass="dataList" RepeatDirection="Horizontal" CellPadding="20"  CellSpacing="20">
                 <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
                 <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
-                <ItemStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+                <ItemStyle BackColor="#FFF7E7" ForeColor="#8C4510"/>
                 <ItemTemplate>
                     <table class="w-100">
                         <tr>
@@ -61,8 +64,13 @@
                     </table>
                 </ItemTemplate>
                 <SelectedItemStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+
+                <SeparatorTemplate>
+                        <SPAN>&nbsp;</SPAN>
+                </SeparatorTemplate>
             </asp:DataList>
             <br />
+        </div>
         </center>
 
         <asp:SqlDataSource ID="SqlDataSourceAll" runat="server" ConnectionString="<%$ ConnectionStrings:PnCdbConnectionString %>" SelectCommand="SELECT [pet_gender], [pet_breed], [pet_image] FROM [petAdoption]"></asp:SqlDataSource>
