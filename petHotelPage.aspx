@@ -92,7 +92,7 @@
     </div>
 
     <h2 class="text-center" style="font-family: coiny; margin-top:3rem">Cat Hotel</h2>
-    <div class="flexBox">
+    <div class="flexBox margin-bottom-6">
         <div class="planDiv">
             <asp:Label ID="hotelTypeCatBasic" class="planHotelType" runat="server">Basic Room</asp:Label><br /><br />
             <asp:Image CssClass="hotelSectionImg" ImageUrl="~/images/petHotel2.jpeg" runat="server"/><br />

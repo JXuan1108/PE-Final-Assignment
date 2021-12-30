@@ -2,18 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <center>
-        <div class="cloud">
-            <img src="images/lower-cloud.png" style="width: 95%"/>
-        </div>
-    </center>
-
-    <div class="container" style="padding-top: 23rem;">
+    <div class="container start-page">
         <div class="row">
             <div class="col">
                 <asp:Image ID="dogGroomImg" runat="server" ImageUrl="~/images/dogGroomImg.png" />
             </div>
-            <div class="col text-center">
+            <div class="col text-center" style="margin-top: 3rem">
                 <h1 style="font-family: coiny;">Dog Grooming Services</h1>
                 <p>Here at Paws N' Claws, we provide professional grooming services. We micro focus on our pets grooming and boarding services to provide the best for your beloved pets. Our full-service cat and dog grooming provide premier care for your pet. Our certified groomers are with your dog every step of the way. 
                     With over 800 hours of hands-on grooming instruction over a 20-week course, our passionate groomers provide the best care for your dog.</p>
@@ -22,7 +16,7 @@
             </div>
         </div>
     </div>
-    <div class="grass">
+    <div class="grass" style="height: 100vh">
         <div class="container">
             <div class="row">
                 <div class="col text-center">

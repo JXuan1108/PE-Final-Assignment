@@ -29,7 +29,7 @@
             <div>
             <br />
             <div class="form-group">
-                <asp:Label ID="Label1" runat="server" style="font-family: coiny" Text="Browse For Pets "></asp:Label> 
+                <asp:Label ID="Label1" runat="server" style="font-size: 1.5rem" Text="Browse For Pets "></asp:Label> 
                 <asp:DropDownList ID="petAdoptionDdl" CssClass="form-control" style="display: inline; width: 5em;" runat="server" AutoPostBack="True" OnSelectedIndexChanged="petAdoptionDdl_SelectedIndexChanged">
                     <asp:ListItem>All</asp:ListItem>
                     <asp:ListItem>Dog</asp:ListItem>

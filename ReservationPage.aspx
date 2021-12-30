@@ -18,7 +18,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container start-page">
+    <div class="container start-page margin-bottom-6">
         <div ID="hotelBc" class="d-grid bc box-shadow1" runat="server">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
@@ -184,7 +184,11 @@
                         <div id="hotelForm" runat="server">
                             <asp:Label Text="Select dates: (From - To) " runat="server" />
                             <div class="form-group d-grid gap-2" style="margin-top: 20px">
-                                <asp:Calendar ID="HotelCalendar" runat="server" OnDayRender="HotelCalendar_DayRender" OnSelectionChanged="HotelCalendar_SelectionChanged"></asp:Calendar>
+                                <asp:Calendar ID="HotelCalendar" runat="server" OnDayRender="HotelCalendar_DayRender" OnSelectionChanged="HotelCalendar_SelectionChanged" BackColor="#F9F2EC" EnableTheming="True">
+                                    <DayHeaderStyle BackColor="#CC9766" />
+                                    <SelectedDayStyle BackColor="#e69900" ForeColor="Black" Font-Bold="true" />
+                                    <TitleStyle BackColor="#E6CCB3" />
+                                </asp:Calendar>                            
                             </div>
                             <br />
                             <asp:Label ID="Label1" runat="server" Text="Pet type:"></asp:Label>

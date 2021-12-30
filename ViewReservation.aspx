@@ -25,7 +25,7 @@
         <center>
             <div ID="emptyResDiv" runat="server" Visible="false">
                 <asp:Label ID="tableState" runat="server" Text="No Active Reservation Record" style="font-family: coiny; font-size: 3rem" />
-                <asp:Image ID="Image1" runat="server" ImageUrl="images/emptyReservation.png" />
+                <asp:Image ID="Image1" runat="server" ImageUrl="images/emptyReservation.png" style="width: 50%"/>
             </div>
 
             <div id="dogTable" class="dogTabDiv" runat="server">

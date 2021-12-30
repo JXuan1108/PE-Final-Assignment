@@ -395,6 +395,10 @@ li {
     width: inherit;
 }
 
+.margin-bottom-6 {
+    margin-bottom: 6rem;
+}
+
 .bc {
     background-color: white;
     border-radius: 12px 12px 12px 12px;

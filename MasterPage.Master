@@ -87,7 +87,7 @@
         <div class="wrapper flex-grow-1">
             <footer class="footer set-bg">
 	        <div>
-	            <div class="row d-flex justify-content-center">
+	            <div class="d-flex justify-content-center">
 	                <div class="col-lg-4 d-flex justify-content-center" align="center">
 	                    <div class="footer__widget">
 	                    	<asp:ImageButton ID="logoBtn" runat="server" ImageUrl="images/petLogo.png" OnClick="logoBtn_Click" Width="60%"/>
