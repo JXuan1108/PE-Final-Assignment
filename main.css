@@ -414,3 +414,29 @@ li {
     height: 17rem;
 }
 
+/* View Reservation */
+
+.dogTabDiv {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.dog-abs {
+    position: absolute;
+    width: 10%;
+    top: -68px;
+    left: 216px;
+}
+
+.catTabDiv {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.kitten-abs {
+    position: absolute;
+    width: 15rem;
+    top: -68px;
+    right: 71px;
+}

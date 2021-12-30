@@ -15,6 +15,15 @@ namespace PE_Final_Assignment
     {
 
         /// <summary>
+        /// emptyResDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl emptyResDiv;
+
+        /// <summary>
         /// tableState control.
         /// </summary>
         /// <remarks>
@@ -22,6 +31,15 @@ namespace PE_Final_Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label tableState;
+
+        /// <summary>
+        /// Image1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
         /// dogTable control.

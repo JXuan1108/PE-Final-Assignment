@@ -23,8 +23,12 @@
     <div class="container start-page">
         
         <center>
-            <asp:Label ID="tableState" runat="server" Text="No Active Reservation Record" style="font-family: coiny; font-size: 3rem" Visible="False" />
-            <div id="dogTable" runat="server">
+            <div ID="emptyResDiv" runat="server" Visible="false">
+                <asp:Label ID="tableState" runat="server" Text="No Active Reservation Record" style="font-family: coiny; font-size: 3rem" />
+                <asp:Image ID="Image1" runat="server" ImageUrl="images/emptyReservation.png" />
+            </div>
+
+            <div id="dogTable" class="dogTabDiv" runat="server">
             <h1 style="font-family: coiny; font-size: 3rem">Dog Grooming Reservation</h1>
             <asp:DataList ID="dogDatalist" runat="server" Width="85%" OnDeleteCommand="dogDatalist_DeleteCommand" BorderWidth="5px" Font-Bold="True" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Justify" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellPadding="4" GridLines="Both">
                 <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
@@ -66,10 +70,11 @@
                 </ItemTemplate>
                 <SelectedItemStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="#663399" />
             </asp:DataList>
+                <img src="images/dog-table.png" class="dog-abs"/>
             </div>
             <br />
 
-            <div id="catTable" runat="server">
+            <div id="catTable" class="catTabDiv" runat="server">
                 <h1 style="font-family: coiny; font-size: 3rem">Cat Grooming Reservation</h1>
                 <asp:DataList ID="catDatalist" runat="server" Width="85%" OnDeleteCommand="catDatalist_DeleteCommand" BorderWidth="5px" Font-Bold="True" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Justify" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellPadding="4" GridLines="Both">
                     <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
@@ -106,6 +111,7 @@
                     </ItemTemplate>
                     <SelectedItemStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="#663399" />
                 </asp:DataList>
+                <img src="images/kitten-table.png" class="kitten-abs"/>
             </div>
 
             <br />

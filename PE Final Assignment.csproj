@@ -1742,7 +1742,10 @@
     <Content Include="images\adopt_other_hamster.jpeg" />
     <Content Include="images\adopt_other_lionhead.jpeg" />
     <Content Include="images\adopt_other_syrian.jpeg" />
+    <Content Include="images\dog-table.png" />
+    <Content Include="images\kitten-table.png" />
     <Content Include="images\lower-cloud.png" />
+    <Content Include="images\emptyReservation.png" />
     <Content Include="petAdoptionDetails.aspx" />
     <Content Include="ReservationPage.aspx" />
     <Content Include="images\aboutUs.jpeg" />

@@ -177,7 +177,7 @@ namespace PE_Final_Assignment
             }
 
             if (dogTable.Visible == false && catTable.Visible == false && hotelTable.Visible == false)
-                tableState.Visible = true;
+                emptyResDiv.Visible = true;
         }
 
         public String getDogServices(List<String> serviceList)
