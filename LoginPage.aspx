@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container start-page min-vh-100" style="padding-top: 13rem">
+    <div class="container min-vh-100 margin-bottom-6" style="padding-top: 13rem">
         <div class="row">
             <div class="col-md-6 mx-auto">
                 <div class="card box-shadow1">
@@ -45,7 +45,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group d-grid gap-2" style="margin-top: 20px">
-                                    <asp:Button ID="login" runat="server" Text="Login" class="btn btn-primary" OnClick="login_Click" ValidationGroup="Validate"/>
+                                    <asp:Button ID="login" runat="server" Text="Login" class="btn btn-warning" OnClick="login_Click" ValidationGroup="Validate"/>
                                 </div>
                                 <div class="form-group" style="margin-top: 10px" align="center">
                                     Not a member?

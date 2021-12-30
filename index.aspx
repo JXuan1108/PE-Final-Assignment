@@ -49,7 +49,7 @@
 					<asp:ImageButton ID="petShopButton" runat="server" imageUrl="images/petShop.jpeg" style="height: 22rem; width: 22rem" OnClick="petShopButton_Click"/>
 				</div>
 				  <div class="middle" align="center">
-					  <asp:LinkButton ID="lbPetShop" runat="server" CssClass="linkButton text lbHovNon" style="font-family: quicksand_bold; font-size: 2em;" PostBackUrl="~/petShopPage.aspx">Pet Shop</asp:LinkButton>
+					  <asp:LinkButton ID="lbPetShop" runat="server" CssClass="linkButton text lbHovNon" style="font-family: quicksand_bold; font-size: 2em;" PostBackUrl="~/petShopPage.aspx">Pet Adoption</asp:LinkButton>
 				  </div>
 			</div>
 			

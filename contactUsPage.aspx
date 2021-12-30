@@ -74,6 +74,6 @@
 	</div>
 
     <div align="center" style="padding-bottom: 5rem">
-        <asp:Button class="btn btn-lg btn-primary" ID="feedbackButton" runat="server" Text="Want to Submit a Feedback?" OnClick="feedbackButton_Click" />
+        <asp:Button class="btn btn-lg btn-warning" ID="feedbackButton" runat="server" Text="Want to Submit a Feedback?" OnClick="feedbackButton_Click" />
     </div>
 </asp:Content>

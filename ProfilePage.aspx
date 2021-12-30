@@ -122,7 +122,7 @@
 
                         <div class="row" style="margin-top: 20px">
                             <div class="form-group d-grid gap-2">
-                                <asp:Button class="btn btn-primary" ID="edit" runat="server" Text="Edit Profile" OnClick="edit_Click"/>
+                                <asp:Button class="btn btn-warning" ID="edit" runat="server" Text="Edit Profile" OnClick="edit_Click"/>
                             </div>
                         </div>
                     </div>

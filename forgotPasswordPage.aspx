@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container start-page" style="margin-top: 30px">
+    <div class="container start-page margin-bottom-6" style="margin-top: 30px">
         <div class="row">
             <div class="col-md-6 mx-auto">
                 <div class="card box-shadow1">
@@ -54,7 +54,7 @@
                         </div>
                         <div class="row" style="margin-top: 25px">
                                 <div class="form-group d-grid gap-2">
-                                    <asp:Button class="btn btn-primary" ID="resetPwdButton" runat="server" Text="Reset Password" OnClick="resetPwdButton_Click" ValidationGroup="Validate"/>
+                                    <asp:Button class="btn btn-warning" ID="resetPwdButton" runat="server" Text="Reset Password" OnClick="resetPwdButton_Click" ValidationGroup="Validate"/>
                                 </div>
                             </div>
                     </div>

@@ -397,6 +397,7 @@ namespace PE_Final_Assignment
 
         protected void ReservationDate_TextChanged(object sender, EventArgs e)
         {
+            price = 0;
             calcPrice();
         }
     }

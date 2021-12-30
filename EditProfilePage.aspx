@@ -99,7 +99,7 @@
 
                             <div class="row" style="margin-top: 20px">
                                 <div class="form-group d-grid gap-2">
-                                    <asp:Button class="btn btn-primary" ID="update" runat="server" Text="Update Profile" OnClick="update_Click1"/>
+                                    <asp:Button class="btn btn-warning" ID="update" runat="server" Text="Update Profile" OnClick="update_Click1"/>
                                 </div>
                             </div>
                         </section>
@@ -133,7 +133,7 @@
                             </div>
                             <div class="row" style="margin-top: 20px">
                                 <div class="form-group d-grid gap-2">
-                                    <asp:Button class="btn btn-primary" ID="resetPassword" runat="server" Text="Reset Password" OnClick="resetPassword_Click" />
+                                    <asp:Button class="btn btn-warning" ID="resetPassword" runat="server" Text="Reset Password" OnClick="resetPassword_Click" />
                                 </div>
                             </div>
                         </section>

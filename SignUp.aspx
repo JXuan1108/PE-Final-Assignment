@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container start-page" style="margin-top: 10px; padding-bottom: 50px">
+    <div class="container start-page margin-bottom-6" style="margin-top: 10px; padding-bottom: 50px">
         <div class="row">
             <div class="col-md-6 mx-auto">
                 <div class="card box-shadow1">
@@ -126,7 +126,7 @@
 
                         <div class="row">
                             <div class="form-group d-grid gap-2" style="margin-top: -25px">
-                                <asp:Button class="btn btn-primary" ID="signUp" runat="server" Text="Sign Up" OnClick="signUp_Click" ValidationGroup="Validate"/>
+                                <asp:Button class="btn btn-warning" ID="signUp" runat="server" Text="Sign Up" OnClick="signUp_Click" ValidationGroup="Validate"/>
                             </div>
                         </div>
                                 

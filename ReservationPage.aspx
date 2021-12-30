@@ -15,10 +15,16 @@
             width: 232px;
             margin-left: 40px;
         }
+        .auto-style6 {
+            width: 290px;
+        }
+        .auto-style7 {
+            width: 130px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container start-page margin-bottom-6">
+    <div class="container start-page margin-bottom-6" style="font-size:1.1rem">
         <div ID="hotelBc" class="d-grid bc box-shadow1" runat="server">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
@@ -48,7 +54,7 @@
                 <div class="card box-shadow1">
                     <div class="card-body">
                         <div class="groomServiceForm">
-                            <asp:Label ID="ServicePrice" runat="server"></asp:Label> <br /> 
+                            <asp:Label ID="ServicePrice" runat="server"></asp:Label>
 
                             <!-- Reservation Date For Groom Services Only -->
                             <div ID="dateGroomDiv" runat="server">
@@ -129,7 +135,7 @@
                                 </table>
                                 <br />
                                 <div class="form-group d-grid gap-2" style="margin-top: 20px">
-                                    <asp:Button ID="dogSubmitBtn" CssClass="btn btn-primary " runat="server" Text="Reserve Now" OnClick="dogSubmitBtn_Click" />
+                                    <asp:Button ID="dogSubmitBtn" CssClass="btn btn-warning" runat="server" Text="Reserve Now" OnClick="dogSubmitBtn_Click" />
                                 </div>
                             </div>
 
@@ -176,30 +182,64 @@
                                 </table>
                                 <br />
                                 <div class="form-group d-grid gap-2" style="margin-top: 20px">
-                                    <asp:Button ID="catSubmitBtn" CssClass="btn btn-primary" runat="server" Text="Reserve Now" OnClick="catSubmitBtn_Click" />
+                                    <asp:Button ID="catSubmitBtn" CssClass="btn btn-warning" runat="server" Text="Reserve Now" OnClick="catSubmitBtn_Click" />
                                 </div>
                             </div>
                         </div>
                         <!-- Hotel Form -->
                         <div id="hotelForm" runat="server">
-                            <asp:Label Text="Select dates: (From - To) " runat="server" />
-                            <div class="form-group d-grid gap-2" style="margin-top: 20px">
-                                <asp:Calendar ID="HotelCalendar" runat="server" OnDayRender="HotelCalendar_DayRender" OnSelectionChanged="HotelCalendar_SelectionChanged" BackColor="#F9F2EC" EnableTheming="True">
-                                    <DayHeaderStyle BackColor="#CC9766" />
-                                    <SelectedDayStyle BackColor="#e69900" ForeColor="Black" Font-Bold="true" />
-                                    <TitleStyle BackColor="#E6CCB3" />
-                                </asp:Calendar>                            
-                            </div>
-                            <br />
-                            <asp:Label ID="Label1" runat="server" Text="Pet type:"></asp:Label>
-                            <asp:Label ID="petTypeL" runat="server"></asp:Label><br />
-                            <asp:Label ID="Label5" runat="server" Text="Hotel Type:"></asp:Label>
+                            <table>
+                                <tr>
+                                    <td class="auto-style7">
+                                        <asp:Label Text="Select dates: (From - To) " runat="server" Font-Bold="True" />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                    </td>
+                                    <td class="auto-style6">
+                                        <div class="form-group d-grid gap-2" style="margin-top: 20px">
+                                            <asp:Calendar ID="HotelCalendar" runat="server" OnDayRender="HotelCalendar_DayRender" OnSelectionChanged="HotelCalendar_SelectionChanged" BackColor="#F9F2EC" EnableTheming="True">
+                                                <DayHeaderStyle BackColor="#CC9766" />
+                                                <SelectedDayStyle BackColor="#e69900" ForeColor="Black" Font-Bold="true" />
+                                                <TitleStyle BackColor="#E6CCB3" />
+                                            </asp:Calendar>   
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style7">&nbsp;</td>
+                                    <td class="auto-style6">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style7">
+                            <asp:Label ID="Label1" runat="server" Text="Pet type:" Font-Bold="True"></asp:Label>
+                                    </td>
+                                    <td class="auto-style6">
+                            <asp:Label ID="petTypeL" runat="server"></asp:Label></td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style7">
+                            <asp:Label ID="Label5" runat="server" Text="Hotel Type:" Font-Bold="True"></asp:Label>
+                                    </td>
+                                    <td class="auto-style6">
                             <asp:Label ID="hotelTypeL" runat="server"></asp:Label>
-                            <asp:Label ID="hotelTypeRoomL" runat="server"></asp:Label><br />
-                            <asp:Label ID="Label7" runat="server" Text="Price/day:"></asp:Label>
-                            <asp:Label ID="priceRateL" runat="server"></asp:Label><br />
+                            <asp:Label ID="hotelTypeRoomL" runat="server"></asp:Label></td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style7">
+                            <asp:Label ID="Label7" runat="server" Text="Price/day:" Font-Bold="True"></asp:Label>
+                                    </td>
+                                    <td class="auto-style6">
+                            <asp:Label ID="priceRateL" runat="server"></asp:Label></td>
+                                </tr>
+                            </table>
+
                             <div class="form-group d-grid gap-2" style="margin-top: 20px">
-                                <asp:Button ID="hotelSubmitBtn" CssClass="btn btn-primary" runat="server" Text="Reserve Now" OnClick="hotelSubmitBtn_Click" />
+                                <asp:Button ID="hotelSubmitBtn" CssClass="btn btn-warning" runat="server" Text="Reserve Now" OnClick="hotelSubmitBtn_Click" />
                             </div>
                         </div>
                     </div>

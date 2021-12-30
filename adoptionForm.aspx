@@ -48,7 +48,7 @@
 
             <div class="row" style="margin-top: 20px">
                 <div class="form-group d-grid gap-2">
-                    <asp:Button class="btn btn-primary" ID="submitForm" runat="server" Text="Submit" ValidationGroup="Validate" OnClick="submitForm_Click"/>
+                    <asp:Button class="btn btn-warning" ID="submitForm" runat="server" Text="Submit" ValidationGroup="Validate" OnClick="submitForm_Click"/>
                 </div>
             </div>
         </div>

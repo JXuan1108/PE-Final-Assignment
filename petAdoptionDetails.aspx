@@ -7,7 +7,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container start-page">
+    <div class="container start-page margin-bottom-6">
         
         <div ID="hotelBc" class="d-grid bc box-shadow1" runat="server">
             <nav aria-label="breadcrumb">
@@ -96,7 +96,7 @@
                                         </td>
                                     </tr>
                                 </table>
-                            <asp:Button ID="requestAdoptionBtn" CssClass="btn btn-primary " runat="server" Text="Request Adoption" OnClick="requestAdoptionBtn_Click"/>
+                            <asp:Button ID="requestAdoptionBtn" CssClass="btn btn-warning " runat="server" Text="Request Adoption" OnClick="requestAdoptionBtn_Click"/>
                             </div>
                         </div>
                     </div>

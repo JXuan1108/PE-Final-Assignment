@@ -19,17 +19,16 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8" style="text-align: justify">
-                    <p class="p-2">We also provide adoption services for anyone who adores pets. Feel free to check out 
+                    <p class="p-2" style="font-size: 1.1rem;">We also provide adoption services for anyone who adores pets. Feel free to check out 
                         the details of the pets available and send in a request for adoption, and we will reply to your request within 2 weeks!</p> 
                 </div>
             </div>
-		</div>
-
+        </div>
         <center>
             <div>
             <br />
             <div class="form-group">
-                <asp:Label ID="Label1" runat="server" style="font-size: 1.5rem" Text="Browse For Pets "></asp:Label> 
+                <asp:Label ID="Label1" runat="server" style="font-size: 1.5rem;" Text="Browse For Pets "></asp:Label> 
                 <asp:DropDownList ID="petAdoptionDdl" CssClass="form-control" style="display: inline; width: 5em;" runat="server" AutoPostBack="True" OnSelectedIndexChanged="petAdoptionDdl_SelectedIndexChanged">
                     <asp:ListItem>All</asp:ListItem>
                     <asp:ListItem>Dog</asp:ListItem>
@@ -37,42 +36,32 @@
                     <asp:ListItem>Other</asp:ListItem>
                 </asp:DropDownList>
             </div>
-            <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> 
-            <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> 
-   
-            <asp:DataList ID="petAdoptionDl" runat="server" DataSourceID="SqlDataSourceAll" RepeatColumns="3" Width="64em" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="Solid" BorderWidth="1px"  GridLines="Both" OnItemCommand="petAdoptionDl_ItemCommand" ItemStyle-CssClass="dataList" RepeatDirection="Horizontal" CellPadding="20"  CellSpacing="20">
-                <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
-                <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
-                <ItemStyle BackColor="#FFF7E7" ForeColor="#8C4510"/>
+
+            <asp:DataList ID="petAdoptionDl" runat="server" DataSourceID="SqlDataSourceAll" RepeatColumns="3" OnItemCommand="petAdoptionDl_ItemCommand" RepeatDirection="Horizontal" CellPadding="24" CellSpacing="24">
+                <ItemStyle ForeColor="#8C4510"/>
                 <ItemTemplate>
-                    <table class="w-100">
+                    <table class="w-100 adoption-item box-shadow2">
                         <tr>
-                            <td class="auto-style1"> 
+                            <td class="auto-style1 first-adoption-item"> 
                                 <asp:ImageButton ID="ImageButton1" CssClass="petAdoptionImg" ImageUrl='<%# Eval("pet_image") %>' CommandName="viewDetail" CommandArgument='<%#Eval("pet_image") %>' runat="server" />
                             </td>
                         </tr>
                         <tr>
-                            <td class="auto-style2" Width="70%">
+                            <td class="auto-style2 text-adoption" Width="70%">
                                 <asp:Label ID="Label2" runat="server" Text='<%# Eval("pet_breed") %>'></asp:Label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="auto-style2" width="70%">
+                            <td class="auto-style2 text-adoption last-adoption-item" width="70%">
                                 <asp:Label ID="Label3" runat="server" Text='<%# Eval("pet_gender") %>'></asp:Label>
                             </td>
                         </tr>
                     </table>
                 </ItemTemplate>
-                <SelectedItemStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
-
-                <SeparatorTemplate>
-                        <SPAN>&nbsp;</SPAN>
-                </SeparatorTemplate>
             </asp:DataList>
             <br />
         </div>
         </center>
-
         <asp:SqlDataSource ID="SqlDataSourceAll" runat="server" ConnectionString="<%$ ConnectionStrings:PnCdbConnectionString %>" SelectCommand="SELECT [pet_gender], [pet_breed], [pet_image] FROM [petAdoption]"></asp:SqlDataSource>
         <br />
         <asp:SqlDataSource ID="SqlDataSourceDog" runat="server" ConnectionString="Data Source=.;Initial Catalog=PnCdb;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [pet_gender], [pet_breed], [pet_image] FROM [petAdoption] WHERE ([pet_type] = @pet_type)">

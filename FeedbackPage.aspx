@@ -123,7 +123,7 @@
 
         <div class="row" style="margin-top: 20px">
             <div class="form-group d-grid gap-2">
-                <asp:Button class="btn btn-primary" ID="submitPassword" runat="server" Text="Submit" OnClick="submitPassword_Click" ValidationGroup="Validate"/>
+                <asp:Button class="btn btn-warning" ID="submitPassword" runat="server" Text="Submit" OnClick="submitPassword_Click" ValidationGroup="Validate"/>
             </div>
         </div>
     </div>
