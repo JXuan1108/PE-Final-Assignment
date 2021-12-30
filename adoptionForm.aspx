@@ -38,7 +38,7 @@
 
             <div class="row">
                 <div class="col">
-                    <label style="font-size: 1.2rem">Why do you want to adopt this pet?</label>
+                    <label style="font-size: 1.2rem">Why do you want to adopt this pet? What are your experiences in pet caring?</label>
                     <div class="form-group">
                         <asp:TextBox CssClass="form-control" ID="reasonText" runat="server" placeholder="Write your reasons here" TextMode="MultiLine" Rows="2"></asp:TextBox>
                         <asp:RequiredFieldValidator runat="server" ID="reasonRequiredFieldValidator" ControlToValidate="reasonText" ErrorMessage="Please enter your reason.<br />" forecolor="Red" Display="Dynamic" style="margin-left: 5px" ValidationGroup="Validate"></asp:RequiredFieldValidator>

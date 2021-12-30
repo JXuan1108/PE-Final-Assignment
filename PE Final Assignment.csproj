@@ -1741,6 +1741,7 @@
     <Content Include="images\adopt_other_cockatiel.jpeg" />
     <Content Include="images\adopt_other_hamster.jpeg" />
     <Content Include="images\adopt_other_lionhead.jpeg" />
+    <Content Include="images\adopt_other_syrian.jpeg" />
     <Content Include="images\lower-cloud.png" />
     <Content Include="petAdoptionDetails.aspx" />
     <Content Include="images\open-book.png" />
