@@ -52,24 +52,24 @@
                                     <asp:ListItem Value="3">Ex-Large</asp:ListItem>
                                 </asp:DropDownList> <br />
 
-                                <asp:CheckBox ID="dogBathCb" runat="server" AutoPostBack="True" Text="Bath" />
+                                <asp:CheckBox ID="dogBathCb" runat="server" AutoPostBack="True" Text="&nbsp;Bath" />
                                 <br />
-                                <asp:CheckBox ID="dogCutCb" runat="server" AutoPostBack="True" Text="Cut" />
-                                <br />
-
-                                <asp:CheckBox ID="dogAromaCb" runat="server" AutoPostBack="True" Text="Aromatheraphy System" />
+                                <asp:CheckBox ID="dogCutCb" runat="server" AutoPostBack="True" Text="&nbsp;Cut" />
                                 <br />
 
-                                <asp:CheckBox ID="dogMassageCb" runat="server" AutoPostBack="True" Text="Aroma Oil Massage"/>
+                                <asp:CheckBox ID="dogAromaCb" runat="server" AutoPostBack="True" Text="&nbsp;Aromatheraphy System" />
                                 <br />
 
-                                <asp:CheckBox ID="dogTickCb" runat="server" AutoPostBack="True" Text="Tick Treatment" />
+                                <asp:CheckBox ID="dogMassageCb" runat="server" AutoPostBack="True" Text="&nbsp;Aroma Oil Massage"/>
                                 <br />
 
-                                <asp:CheckBox ID="dogSciCutCb" runat="server" AutoPostBack="True" Text="Scissor Cut" />
+                                <asp:CheckBox ID="dogTickCb" runat="server" AutoPostBack="True" Text="&nbsp;Tick Treatment" />
                                 <br />
 
-                                <asp:CheckBox ID="dogDetanglingCb" runat="server" AutoPostBack="True" Text="Detangling" />
+                                <asp:CheckBox ID="dogSciCutCb" runat="server" AutoPostBack="True" Text="&nbsp;Scissor Cut" />
+                                <br />
+
+                                <asp:CheckBox ID="dogDetanglingCb" runat="server" AutoPostBack="True" Text="&nbsp;Detangling" />
                                 <br />
 
                                 <div class="form-group d-grid gap-2" style="margin-top: 20px">
@@ -79,19 +79,19 @@
 
                                 <div id="catForm" runat="server">
                                 <br />
-                                <asp:CheckBox ID="catBathCb" runat="server" AutoPostBack="True" Text="Bath" />
+                                <asp:CheckBox ID="catBathCb" runat="server" AutoPostBack="True" Text="&nbsp;Bath" />
                                 <br />
 
-                                <asp:CheckBox ID="catCutCb" runat="server" AutoPostBack="True" Text="Cut"/>
+                                <asp:CheckBox ID="catCutCb" runat="server" AutoPostBack="True" Text="&nbsp;Cut"/>
                                 <br />
 
-                                <asp:CheckBox ID="catTickCb" runat="server" AutoPostBack="True" Text="Tick Treatment" />
+                                <asp:CheckBox ID="catTickCb" runat="server" AutoPostBack="True" Text="&nbsp;Tick Treatment" />
                                 <br />
 
-                                <asp:CheckBox ID="catSciCutCb" runat="server" AutoPostBack="True" Text="Scissor Cut"/>
+                                <asp:CheckBox ID="catSciCutCb" runat="server" AutoPostBack="True" Text="&nbsp;Scissor Cut"/>
                                 <br />
 
-                                <asp:CheckBox ID="catDetanglingCb" runat="server" AutoPostBack="True" Text="Detangling" />
+                                <asp:CheckBox ID="catDetanglingCb" runat="server" AutoPostBack="True" Text="&nbsp;Detangling" />
                                 <br />
 
                                 <div class="form-group d-grid gap-2" style="margin-top: 20px">

@@ -90,6 +90,12 @@ namespace PE_Final_Assignment
 
                 cmd.ExecuteNonQuery();
                 con.Close();
+
+                Session["email"] = email.Text.Trim();
+                Session["FName"] = firstName.Text.Trim();
+                Session["LName"] = lastName.Text.Trim();
+                Session["role"] = "user";
+
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Sign Up Successfully!'); window.location.href = 'index.aspx'", true);
             }
             catch (Exception ex)

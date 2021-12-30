@@ -1724,6 +1724,7 @@
     <Content Include="forgotPasswordPage.aspx" />
     <Content Include="Global.asax" />
     <Content Include="images\lower-cloud.png" />
+    <Content Include="images\open-book.png" />
     <Content Include="ReservationPage.aspx" />
     <Content Include="images\aboutUs.jpeg" />
     <Content Include="images\angry.png" />

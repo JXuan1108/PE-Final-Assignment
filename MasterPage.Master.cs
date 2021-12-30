@@ -19,12 +19,14 @@ namespace PE_Final_Assignment
                     login.Visible = true; //login button
                     logout.Visible = false; //logout button
                     profile.Visible = false; //profile button
+                    reservation.Visible = false; //reservation button
                 }
                 else if (Session["role"].Equals("user"))
                 {
                     login.Visible = false; //login button
                     logout.Visible = true; //logout button
                     profile.Visible = true; //profile button
+                    reservation.Visible = true; //reservation button
                 }
             }
             catch(Exception ex)
@@ -56,6 +58,7 @@ namespace PE_Final_Assignment
             login.Visible = true; //login button
             logout.Visible = false; //logout button
             profile.Visible = false; //profile button
+            reservation.Visible = false; //reservation button
             Response.Redirect("~/index.aspx");
         }
 

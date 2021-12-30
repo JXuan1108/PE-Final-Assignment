@@ -357,18 +357,18 @@ li {
 .requestButton {
     background-color: #0d6efd;
     border-radius: 10em;
-    box-shadow: 0rem 0.4rem 0.7rem 0.05rem #00ccff;
-    color: #003399;
+    color: white;
     padding: 0.5em 1em;
     text-align: center;
     transition: all 250ms;
     border: none;
-    margin-left: 6.8rem;
+    margin-left: 9.8rem;
+    font-family: quicksand;
 }
 
 .requestButton:hover {
-    box-shadow: 0rem 0.4rem 0.7rem 0.05rem #00ffff;
     transform: scale(1.05) rotate(-1deg);
+    font-family: quicksand;
 }
 
 /* petGroomingPage */
