@@ -2,8 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1 class="p-2" style="font-family: coiny; font-size: 3rem; margin-top: 7rem" align="center">Pet Hotel</h1>
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="margin-top: 1rem">
+    
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="margin-top: 7rem">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -26,9 +26,23 @@
     </button>
 </div>
 
+    <div class="container">
+        <div class="row" style="border-bottom: 2px dashed #8b0000; margin-top: 7rem">
+            <div class="col-lg-12" align="center">
+                <h1 class="mt-4 p-2" style="font-family: coiny; font-size: 3rem">Pet Hotels</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8" style="text-align: justify">
+                    <p class="p-2">Started from humble beginnings, we have accumulated a vast experience in pet hospitality, especially for senior care and medical care. Our passion for pets is driven by the unfailing relationship bond with pets, as pets are much more appreciative than humans do. 
+                        We provide hospitality so that pet owners can feel assured that the pets are well monitored and cared when they are not at home. In fact, we have built trusts with many pets per our record. Many pets repeatedly enjoy our service from puppy, kitten to senior. We are committed, responsible and serious with pet care. </p> 
+                </div>
+            </div>
+		</div>
+    </div>
+
 <h1 class="mt-3 p-2" style="font-family: coiny; font-size: 3rem" align="center">Plan</h1>
 <div id="hotelDetails" class="hotelDetails" runat="server">
-    <h2 style="font-family: coiny">Dog</h2>
+    <h2 class="text-center" style="font-family: coiny">Dog Hotel</h2>
     <div class="flexBox">
         <div class="planDiv">
             <asp:Label ID="hotelTypeDogBasic" class="planHotelType" runat="server">Basic Room</asp:Label><br /><br />
@@ -77,7 +91,7 @@
         </div>
     </div>
 
-    <h2 style="font-family: coiny; margin-top:3rem">Cat</h2>
+    <h2 class="text-center" style="font-family: coiny; margin-top:3rem">Cat Hotel</h2>
     <div class="flexBox">
         <div class="planDiv">
             <asp:Label ID="hotelTypeCatBasic" class="planHotelType" runat="server">Basic Room</asp:Label><br /><br />

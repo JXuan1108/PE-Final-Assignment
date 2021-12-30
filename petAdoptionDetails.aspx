@@ -7,13 +7,8 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br />
     <div class="container start-page">
+        
         <div ID="hotelBc" class="d-grid bc box-shadow1" runat="server">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
@@ -34,12 +29,11 @@
                 <div class="card box-shadow1">
                     <div class="card-body">
                         <div class="groomServiceForm">
-
                             <div class="form-group d-grid gap-2" style="margin-top: 20px">
                                 <table class="w-100">
                                     <tr>
                                         <td class="auto-style1">
-                                            <asp:Label ID="Label1" runat="server" Text="Breed:"></asp:Label>
+                                            <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="Breed:"></asp:Label>
                                         </td>
                                         <td class="auto-style1">
                                             <asp:Label ID="lbBreed" runat="server" Text="Label"></asp:Label>
@@ -47,7 +41,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <asp:Label ID="Label3" runat="server" Text="Gender:"></asp:Label>
+                                            <asp:Label ID="Label3" runat="server" Font-Bold="True" Text="Gender:"></asp:Label>
                                         </td>
                                         <td>
                                             <asp:Label ID="lbGender" runat="server" Text="Label"></asp:Label>
@@ -55,7 +49,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <asp:Label ID="Label5" runat="server" Text="Age:"></asp:Label>
+                                            <asp:Label ID="Label5" runat="server" Font-Bold="True" Text="Age:"></asp:Label>
                                         </td>
                                         <td>
                                             <asp:Label ID="lbAge" runat="server" Text="Label:"></asp:Label>
@@ -63,7 +57,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <asp:Label ID="Label7" runat="server" Text="Size:"></asp:Label>
+                                            <asp:Label ID="Label7" runat="server" Font-Bold="True" Text="Size:"></asp:Label>
                                         </td>
                                         <td>
                                             <asp:Label ID="lbSize" runat="server" Text="Label"></asp:Label>
@@ -71,7 +65,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <asp:Label ID="Label9" runat="server" Text="Colour:"></asp:Label>
+                                            <asp:Label ID="Label9" runat="server" Font-Bold="True" Text="Colour:"></asp:Label>
                                         </td>
                                         <td>
                                             <asp:Label ID="lbColour" runat="server" Text="Label"></asp:Label>
@@ -79,7 +73,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <asp:Label ID="Label11" runat="server" Text="Vaccinated:"></asp:Label>
+                                            <asp:Label ID="Label11" runat="server" Font-Bold="True" Text="Vaccinated:"></asp:Label>
                                         </td>
                                         <td>
                                             <asp:Label ID="lbVaccinated" runat="server" Text="Label"></asp:Label>
@@ -87,7 +81,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <asp:Label ID="Label12" runat="server" Text="Dewormed:"></asp:Label>
+                                            <asp:Label ID="Label12" runat="server" Font-Bold="True" Text="Dewormed:"></asp:Label>
                                         </td>
                                         <td>
                                             <asp:Label ID="lbDewormed" runat="server" Text="Label"></asp:Label>
@@ -95,7 +89,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <asp:Label ID="Label13" runat="server" Text="Condition:"></asp:Label>
+                                            <asp:Label ID="Label13" runat="server" Font-Bold="True" Text="Condition:"></asp:Label>
                                         </td>
                                         <td>
                                             <asp:Label ID="lbCondition" runat="server" Text="Label"></asp:Label>

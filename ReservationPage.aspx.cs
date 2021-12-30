@@ -107,7 +107,7 @@ namespace PE_Final_Assignment
                 price += 35;
             if (dogDetanglingCb.Checked)
                 price += 20;
-            if (price != 0 && (ReservationDate.Text.ToString() != ""))
+            if (price != 0 && (ReservationDate.Text.ToString() != "") && (DateTime.Today <= Convert.ToDateTime(ReservationDate.Text.ToString())))
                 dogSubmitBtn.Visible = true;
             else
                 dogSubmitBtn.Visible = false;
@@ -124,7 +124,7 @@ namespace PE_Final_Assignment
                 price += 35;
             if (catDetanglingCb.Checked)
                 price += 20;
-            if (price != 0 && (ReservationDate.Text.ToString() != ""))
+            if (price != 0 && (ReservationDate.Text.ToString() != "") && (DateTime.Today <= Convert.ToDateTime(ReservationDate.Text.ToString())))
                 catSubmitBtn.Visible = true;
             else
                 catSubmitBtn.Visible = false;
@@ -393,6 +393,11 @@ namespace PE_Final_Assignment
                 e.Day.IsSelectable = false;
                 e.Cell.ForeColor = System.Drawing.Color.Gray;
             }
+        }
+
+        protected void ReservationDate_TextChanged(object sender, EventArgs e)
+        {
+            calcPrice();
         }
     }
 }
