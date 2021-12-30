@@ -98,7 +98,7 @@
             <div class="form-group">
                 <asp:TextBox ID="contact" runat="server" CssClass="form-control" placeholder="Mobile Number"></asp:TextBox>
                 <asp:RequiredFieldValidator runat="server" ID="PhoneRequiredField" ControlToValidate="contact" ErrorMessage="Please enter your phone number.<br />" forecolor="Red" Display="Dynamic" style="margin-left: 5px" ValidationGroup="Validate"></asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator ID="PhoneRegularExpressionValidator" runat="server"  ControlToValidate="contact" ErrorMessage="Please enter a valid phone number.<br />"  ValidationExpression="[0-9]{11}" style="margin-left: 5px" ForeColor="Red" ValidationGroup="Validate"></asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="PhoneRegularExpressionValidator" runat="server"  ControlToValidate="contact" ErrorMessage="Please enter a valid phone number.<br />"  ValidationExpression="[0-9]{10}" style="margin-left: 5px" ForeColor="Red" ValidationGroup="Validate"></asp:RegularExpressionValidator>
             </div> 
         </div>
 

@@ -403,5 +403,14 @@ li {
     margin-bottom: 1rem;
 }
 
+.pet-image{
+    width: 30px;
+    height: 30px;
+}
 
+/* pet adoption page*/
+.petAdoptionImg {
+    width: 16rem;
+    height: 17rem;
+}
 
