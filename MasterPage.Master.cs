@@ -66,5 +66,10 @@ namespace PE_Final_Assignment
         {
             Response.Redirect("~/ProfilePage.aspx");
         }
+
+        protected void logoBtn_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("~/index.aspx");
+        }
     }
 }

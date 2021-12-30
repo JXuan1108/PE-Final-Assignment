@@ -414,3 +414,43 @@ li {
     height: 17rem;
 }
 
+/*footer*/
+.footer {
+    padding-top: 2rem;
+    background-color: #333333;
+    margin-left: -6rem;
+}
+
+.footer h4 {
+    font-family: coiny;
+    font-size: 1.8rem;
+    color: #faf6f2;
+}
+
+.footer p {
+    font-family: dooodleista;
+    font-size: 20px;
+    line-height: 0.5rem;
+    color: #faf6f2;
+}
+
+.footer__social ul li {
+    margin-left: -3rem;
+    list-style: none;
+    font-size: 1.1rem;
+    color: #faf6f2;
+}
+
+.footer__social ul li a {
+    display: inline-block;
+    color: #faf6f2;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+
+.footer__about .footer__social a:last-child {
+    margin-right: 0;
+}
+
