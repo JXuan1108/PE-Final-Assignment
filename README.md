@@ -23,3 +23,30 @@ User can click on the images, and will be redirected to a new page that display 
 ## Login Page
 User must login or register to use the services such as pet hotel and pet grooming. <br />
 User can also reset password if they have forgotten them.
+
+![Animation](https://user-images.githubusercontent.com/96167238/166645771-425ea7b0-601f-4082-bf46-e88ac8753fc4.gif)
+
+## Pet Grooming Services
+User can choose cat grooming service or dog grooming service. 
+<br/>User can choose a date and choose the services required for the pet.
+
+##### Pet Grooming Reservation flow
+![Animation](https://user-images.githubusercontent.com/96167238/166646223-66bdde0b-59af-4005-b067-cfa08d16287a.gif)
+
+## Pet Hotel Services
+User can choose hotel services for their cats and dogs. 
+<br/>Three types of room size are provided with different prices for each pet type.
+
+![Animation](https://user-images.githubusercontent.com/96167238/166648909-d0c9ce2a-b726-474b-be8d-55b95b9ba110.gif)
+
+##### Pet Hotel Reservation flow
+User can select the duration of stay from the calander web server control that have been used. 
+Price are then calculated based on the total number of stays multiplied by price per day.
+
+![Animation](https://user-images.githubusercontent.com/96167238/166650233-ee136546-93c8-47b2-a5e9-8445329e3521.gif)
+
+## View Booking
+User can view their grooming reservation and hotel reservations.
+<br/>User can delete their reservations.
+
+![Animation](https://user-images.githubusercontent.com/96167238/166650595-8a293fc3-893e-443f-8ad5-cb00d72ab5be.gif)
