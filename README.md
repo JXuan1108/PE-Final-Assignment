@@ -50,3 +50,17 @@ User can view their grooming reservation and hotel reservations.
 <br/>User can delete their reservations.
 
 ![Animation](https://user-images.githubusercontent.com/96167238/166650595-8a293fc3-893e-443f-8ad5-cb00d72ab5be.gif)
+
+## User Profile
+User can look up their information on this page.
+
+![image](https://user-images.githubusercontent.com/96167238/166651004-5c48244b-682d-49c6-b2cd-d474c1d43bb9.png)
+
+##### Update User Profile
+User may update their details as well.
+
+![Animation](https://user-images.githubusercontent.com/96167238/166651619-0626b022-2d60-46c3-ac57-ff0aa188a639.gif)
+
+## Contact us page
+User can rate our services or provide suggestions for improvements.
+![Animation](https://user-images.githubusercontent.com/96167238/166652295-ceae3cbf-28cf-4d5a-ab0e-9c17afd41ed1.gif)
